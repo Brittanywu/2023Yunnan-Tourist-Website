@@ -1,6 +1,6 @@
 # EBU6305
 ## Group Number:2023EBU6305G26
-## Project Title:Guangzhou
+## Project Title:Welcome to Yunnan
 ## Members:
 Beining Wu,2020213308,200978970,jp2020213308@qmul.ac.uk     
 Yuetong Zhao,2020213312,200979818,jp2020213312@qmul.ac.uk     
