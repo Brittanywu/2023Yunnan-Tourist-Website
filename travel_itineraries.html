@@ -3,35 +3,36 @@
 
 <head>
     <title>Itineraries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .navigation {
-            margin-top: -10px;
-            margin-left: -10px;
-            margin-right: -10px;
-            border: none;
-            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: rgb(9, 9, 8);
+            padding: 10px 20px;
         }
 
-        .logo {
-            margin-left: 10px;
-            margin-top: 10px;
-            float: left;
-        }
-
-        .navitext {
-            margin-left: 300px;
-            float: left;
+        .navilink {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .navilink li {
-            width: 120px;
-            float: left;
+            margin-left: 20px;
         }
 
         .mainMap {
             margin-left: -10px;
             margin-right: -10px;
+
         }
 
         .mapImg {
@@ -82,7 +83,6 @@
         }
 
         .everydayit {
-            height: 400px;
             margin-top: 50px;
             margin-bottom: 50px;
             border: 1px solid gray;
@@ -92,16 +92,15 @@
         }
 
         .everydayit .leftIntro {
-            height: 400px;
-            width: 50%;
             text-align: left;
+            flex: 1;
+            padding: 20px;
         }
 
         .everydayit .rightImg {
-            height: 400px;
-            width: 50%;
-            background-size: contain;
-            display: block;
+            background-size: cover;
+            background-position: center;
+            flex: 1;
         }
 
         .hvr-grow-shadow {
@@ -127,19 +126,14 @@
 
 
         .bottombar {
+            display: flex;
             background-color: rgb(9, 9, 8);
-            height: 250px;
-            margin-bottom: -10px;
-            margin-left: -10px;
-            margin-right: -10px;
+            padding: 20px;
+            justify-content: space-around;
         }
 
         .bottominfo {
-            margin-left: 40px;
-            margin-top: 5px;
             color: white;
-            width: 150px;
-            float: left;
         }
 
         a {
@@ -147,8 +141,27 @@
             text-decoration: none;
         }
 
+        .navilink li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .navilink li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navilink li a:hover {
+            text-decoration: underline;
+        }
+
+        .bottombar h5:hover {
+            text-decoration: underline;
+        }
+
         button {
-            width: 650px;
+            width: 200px;
             height: 50px;
             line-height: 10px;
             background-color: black;
@@ -156,6 +169,21 @@
             border-radius: 40px;
             text-align: center;
             margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .everydayit {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .everydayit .leftIntro {
+                padding: 10px;
+            }
+
+            .everydayit .rightImg {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -165,16 +193,16 @@
         <div class="logo">
             <img src="images/logo.jpg">
         </div>
-        <div class="navitext">
-            <ul class="navilink">
-                <br><br>
-                <li><a href="">Destinations</a></li>
-                <li><a href="">&nbsp;&nbsp; Culture</a></li>
-                <li><a href="">Itineraries</a></li>
-                <li><a href="">Food & Drink</a></li>
-                <li><a href="">&nbsp;&nbsp;Accommodations</a></li>
-            </ul>
-        </div>
+
+        <ul class="navilink">
+            <br><br>
+            <li><a href="">Destinations</a></li>
+            <li><a href="">&nbsp;&nbsp; Culture</a></li>
+            <li><a href="">Itineraries</a></li>
+            <li><a href="">Food & Drink</a></li>
+            <li><a href="">&nbsp;&nbsp;Accommodations</a></li>
+        </ul>
+
     </div>
     <div class="mainMap">
         <div class="mapImg"></div>
@@ -191,29 +219,24 @@
                     <br>
                 </h1>
             </div>
-            <div class="stateit">
-                <br><br><br>
-                <button>
-                    <h3 style="color: white;">LINE1: place1 - place2 - place3 - place4</h3>
-                </button>
-                <button>
-                    <h3 style="color: white;">LINE2: place1 - place2 - place3 - place4</h3>
-                </button>
-                <button>
-                    <h3 style="color: white;">LINE3: place1 - place2 - place3 - place4</h3>
-                </button>
-                <button>
-                    <h3 style="color: white;">LINE4: place1 - place2 - place3 - place4</h3>
-                </button>
-
-            </div>
-
         </div>
 
     </div>
     <div class="recommendit">
         <h2><br>Recommended Itineraries</h2>
         <p style="color: rgb(95, 95, 95);">line 1/2/3/4</p>
+        <button>
+            <h3 style="color: white;">LINE1</h3>
+        </button>
+        <button>
+            <h3 style="color: white;">LINE2</h3>
+        </button>
+        <button>
+            <h3 style="color: white;">LINE3</h3>
+        </button>
+        <button>
+            <h3 style="color: white;">LINE4</h3>
+        </button>
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
                 <h1>&emsp;Day 1 : Spend the day in xxx</h1>
@@ -268,7 +291,7 @@
     <div class="bottombar">
         <div class="bottominfo">
             <h3>Find us on</h3>
-            <h5> Twitter</h5>
+            <h5>Twitter</h5>
             <h5>Instagram</h5>
             <h5>Facebook</h5>
             <h5>Youtube</h5>
@@ -294,8 +317,7 @@
             <h5>Business Events</h5>
         </div>
         <div class="bottominfo">
-            <br><br><br><br><br><br>
-            <img src="images/logo.jpg">
+            <img src="images/logo.jpg" alt="Logo">
         </div>
     </div>
 </body>
