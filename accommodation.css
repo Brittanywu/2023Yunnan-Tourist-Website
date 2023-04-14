@@ -1,0 +1,179 @@
+.navigation {
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    border: none;
+    height: 90px;
+    background-color: rgb(1, 1, 1);
+}
+
+.logo {
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.navitext {
+    margin-left: 300px;
+    float: left;
+}
+
+.navilink li {
+    width: 120px;
+    float: left;
+}
+
+.navilink li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navilink li a:hover {
+    text-decoration: underline;
+}
+
+
+.main {
+    margin-left: -10px;
+    margin-right: -10px;
+    border: none;
+}
+
+.mainbackground {
+    height: 740px;
+    border: none;
+    background-color: rgb(0, 0, 0)
+    
+}
+
+.mainImg{
+    height: 400px;
+    background-image: url(images/accom5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pagetitle {
+    margin-top: -40px;
+    
+    color: white;
+    font-size: 20pt;
+    text-align: left;
+    height: 300px;
+}
+
+.introduction {
+    
+    color: white;
+    font-size: 12pt;
+    text-align: left;
+    height: 200px;
+}
+
+.showblocks{
+    background-color:rgb(252, 252, 252) ;
+    
+}
+
+.acotitle {
+    font-size: 30pt;
+    text-align: center;
+
+}
+
+.Img_arrange {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 60px;
+    margin: 0 auto;
+}
+
+.acoimage {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 300px;
+    height: 300px; 
+    overflow: hidden;
+    /* background-repeat: no-repeat; */
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center; 
+    cursor: pointer;
+    
+}
+
+.acoimage .mask{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 300px;
+    height: 300px; 
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center; 
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    background-color: black;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.acoimage:hover .mask{
+    opacity: 0.6;
+}
+
+
+.acointro {
+    width: 500px;
+    font-size: 13pt;
+    font-weight: 300;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.bottombar {
+    background-color: rgb(9, 9, 8);
+    height: 250px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.bottominfo {
+    margin-left: 40px;
+    margin-top: 5px;
+    color: white;
+    width: 150px;
+    float: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.stateit {
+    height: 300px;
+    width: 650px;
+    margin-left: 50px;
+    display: inline-block;
+}
+.blank{
+    height: 100px;
+    width: 600px;
+    border: none;
+}
+
+.pictitle{
+    color: white;
+    font-weight: 600;
+    font-size:large;
+}
+
+.piccontent{
+    color: white;
+    font-size: small;
+}
