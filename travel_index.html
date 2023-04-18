@@ -1,165 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<style>
-    body {
-    margin: 0;
-    padding: 0;
-    }
-     .navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: rgb(9, 9, 8);
-        padding: 10px 20px;
-    }
-    .navilink {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .navilink li {
-        margin-left: 20px;
-    }
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .mainpicture {
-        height: 500px;
-        width: 100%;
-        background-image: url(images/background.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    .introduction {
-        background-color: rgb(9, 9, 8);
-        color: white;
-        font-size: 15pt;
-        text-align: left;
-        padding: 30px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .showblocks {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: rgb(252, 252, 252);
-        padding: 20px 0;
-        color: white;
-        gap: 20px;
-    }
-    .mustdo {
-        color: black;
-        font-size: 20pt;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-    .block {
-        width: calc(33.333% - 20px);
-        height: 300px;
-        margin-bottom: 20px;
-        position: relative;
-    }
-    .block h3 {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-    }
-    .block img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .bottombar {
-        display: flex;
-        background-color: rgb(9, 9, 8);
-        padding: 20px;
-        justify-content: space-around;
-    }
-    .bottominfo {
-        color: white;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    .navilink li {
-     margin-left: 20px;
-     cursor: pointer;
-     }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-    .navilink li a {
-     color: white;
-     text-decoration: none;
-     font-size: 18px;
-     }
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(9, 9, 8);
+            padding: 10px 20px;
+        }
 
-    .navilink li a:hover {
-     text-decoration: underline;
-     }
-    .bottombar h5:hover {
-    text-decoration: underline;
-     }
-   </style>
+        .navilink {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navilink li {
+            margin-left: 20px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imgBox{
+             
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+           
+        }
+
+        .imgBox img{
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        
+        }
+        .img1{
+            display: block;
+        }
+
+        .img2{
+            display: none;
+        }
+
+        .img3,.img4,.img5{
+            display: none;
+        }
+
+        .introduction {
+            background-color: rgb(9, 9, 8);
+            color: white;
+            font-size: 15pt;
+            text-align: left;
+            padding: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .showblocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(252, 252, 252);
+            padding: 20px 0;
+            color: white;
+            gap: 20px;
+        }
+
+        .mustdo {
+            color: black;
+            font-size: 20pt;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .block {
+            width: calc(33.333% - 20px);
+            height: 300px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .block h3 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bottombar {
+            display: flex;
+            background-color: rgb(9, 9, 8);
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .bottominfo {
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navilink li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .navilink li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navilink li a:hover {
+            text-decoration: underline;
+        }
+
+        .bottombar h5:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- navigation -->
     <div class="navigation">
-      <div class="logo">
-        <img src="images/logo.jpg">
-      </div>
-      <ul class="navilink">
-        <li><a href="">Destinations</a></li>
-        <li><a href="">Culture</a></li>
-        <li><a href="">Itineraries</a></li>
-        <li><a href="">Food & Drink</a></li>
-        <li><a href="">Accommodations</a></li>
-      </ul>
+        <div class="logo">
+            <img src="images/logo.jpg">
+        </div>
+        <ul class="navilink">
+            <li><a href="">Destinations</a></li>
+            <li><a href="">Culture</a></li>
+            <li><a href="">Itineraries</a></li>
+            <li><a href="">Food & Drink</a></li>
+            <li><a href="">Accommodations</a></li>
+        </ul>
     </div>
+
+    <!-- main -->
     <div class="main">
-     <div class="mainpicture"></div>
-     <div class="introduction">
-      <h2>Feel free to discover your unique way of exploring Yunnan here</h2>
-     </div>
-     <div class="showblocks">
-        <div class="mustdo">
-        <h3>&nbsp;&nbsp;Must-do Yunnan experiences</h3>
+        <!-- <div class="mainpicture"></div> -->
+        
+        <div class="imgBox">
+            <img class="img-slide img1" src="image2.0/titian.jpg" alt="1">
+            <img class="img-slide img2" src="image2.0/dali.jpg" alt="2">
+            <img class="img-slide img3" src="image2.0/aaa.jpg" alt="3">
+            <img class="img-slide img4" src="image2.0/aaa-19.jpg" alt="4">
+            <img class="img-slide img5" src="image2.0/DSC_4810.jpg" alt="5">
         </div>
-        <br><br>
-        <div class="block foodpic">
-            <img src="images/food.jpg" alt="Food and drink">
-            <h3>Food and drink -></h3>
+
+        <div class="introduction">
+            <h2>Feel free to discover your unique way of exploring Yunnan here</h2>
         </div>
-       <div class="block hotelpic">
-            <img src="images/hotel.jpg" alt="Cozy accommodations">
-            <h3>Cozy accommodations -></h3>
+
+        <!-- showblocks -->
+        <div class="showblocks">
+            <div class="mustdo">
+                <h3>&nbsp;&nbsp;Must-do Yunnan experiences</h3>
+            </div>
+            <br><br>
+            <div class="block foodpic">
+                <img src="images/food.jpg" alt="Food and drink">
+                <h3>Food and drink -></h3>
+            </div>
+            <div class="block hotelpic">
+                <img src="image2.0/DSC_9347.jpg" alt="Cozy accommodations">
+                <h3>Cozy accommodations -></h3>
+            </div>
+            <div class="block culturepic">
+                <img src="image2.0/aaa-8.jpg" alt="Minority cultures">
+                <h3>Minority cultures -></h3>
+            </div>
+            <div class="block placepic">
+                <img src="image2.0/DSC_9631.jpg" alt="Ideal destinations">
+                <h3>Ideal destinations -></h3>
+            </div>
+            <div class="block routepic">
+                <img src="images/route.jpg" alt="Suitable itineraries">
+                <h3>Suitable itineraries -></h3>
+            </div>
         </div>
-        <div class="block culturepic">
-            <img src="images/culture.jpg" alt="Minority cultures">
-            <h3>Minority cultures -></h3>
-        </div>
-        <div class="block placepic">
-            <img src="images/place.jpg" alt="Ideal destinations" >
-            <h3>Ideal destinations -></h3>
-        </div>
-        <div class="block routepic">
-            <img src="images/route.jpg" alt="Suitable itineraries">
-            <h3>Suitable itineraries -></h3>
-        </div>
-      </div>
     </div>
     <div class="bottombar">
         <div class="bottominfo">
-         <h3>Find us on</h3>
-         <h5>Twitter</h5>
-         <h5>Instagram</h5>
-         <h5>Facebook</h5>
-         <h5>Youtube</h5>
+            <h3>Find us on</h3>
+            <h5>Twitter</h5>
+            <h5>Instagram</h5>
+            <h5>Facebook</h5>
+            <h5>Youtube</h5>
         </div>
         <div class="bottominfo">
             <h3>Contact us</h3>
@@ -186,4 +235,19 @@
         </div>
     </div>
 </body>
-</html>    
+<script type="text/javascript">
+    var index=0;
+    //图片轮播效果
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,2000);
+</script>
+</html>
