@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       <style>
 
-        .minorPic_right{
-            width:300px;
-            height:400px;
+<head>
+    <style>
+        .minorPic_right {
+            width: 300px;
+            height: 400px;
             background-repeat: no-repeat;
             margin-top: 30px;
             margin-left: 30px;
@@ -20,26 +20,29 @@
             transition-duration: 0.3s;
             -webkit-transition-property: box-shadow, transform;
             transition-property: box-shadow, transform;
-            
+
         }
+
         /* Grow-Shadow */
-        .minorPic_right:hover, .minorPic_right:focus, .minorPic_right:active {
+        .minorPic_right:hover,
+        .minorPic_right:focus,
+        .minorPic_right:active {
             box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
         }
 
-        .cultureinrto_left{
+        .cultureinrto_left {
             width: 500px;
             font-size: 9pt;
-            text-align:left;
-            color:white;
-            
+            text-align: left;
+            color: white;
+
         }
 
-        .minorPic_left{
-            width:300px;
-            height:400px;
+        .minorPic_left {
+            width: 300px;
+            height: 400px;
             background-repeat: no-repeat;
             margin-top: 30px;
             margin-left: 40px;
@@ -54,33 +57,36 @@
             -webkit-transition-property: box-shadow, transform;
             transition-property: box-shadow, transform;
         }
+
         /* Grow-Shadow */
-        .minorPic_left:hover, .minorPic_left:focus, .minorPic_left:active {
+        .minorPic_left:hover,
+        .minorPic_left:focus,
+        .minorPic_left:active {
             box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
         }
 
-        .cultureinrto_right{
+        .cultureinrto_right {
             width: 500px;
             font-size: 9pt;
-            text-align:left;
-            color:white;
+            text-align: left;
+            color: white;
         }
-        
-    body{
-	    background-image: url("images/culture_back1.jpg");
 
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+        body {
+            background-image: url("images/culture_back1.jpg");
+
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
 
-    /*top and bottom*/
-    .navigation {
+        /*top and bottom*/
+        .navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -107,124 +113,164 @@
             text-decoration: none;
             font-size: 18px;
         }
+
         .navilink li a:hover {
-        text-decoration: underline;
-    }
+            text-decoration: underline;
+        }
 
-    .main {
-        margin: 0;
-        border: none;
-    }
+        /* add picture rotation */
+        .imgBox {
 
-    .mainpicture {
-        height: 500px;
-        border:none;
-        background-image:url(images/Culture_Main.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
 
-    .pagetitle {
-        color: white;
-        font-size: 20pt;
-        text-align: left;
-        padding-left: 20px;
-    }
+        }
 
-    .introduction{
-      margin-top: -30px;
-      background-color:rgb(9, 9, 8);
-      color:white; font-size: 15pt;
-      text-align: left;
-      height:200px;
-      border:none;
-    }
+        .imgBox img {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
 
-    .showblocks {
-        background-color: rgb(252, 252, 252);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
+        }
 
-    .bottombar {
-        display: flex;
-        background-color: rgb(9, 9, 8);
-        padding: 20px;
-        justify-content: space-around;
-    }
+        .img1 {
+            display: block;
+        }
 
-    .bottominfo {
-        color: white;
-    }
+        .img2,
+        .img3 {
+            display: none;
+        }
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
 
-    .bottombar h5:hover {
-        text-decoration: underline;
-    }
-    .content-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-    }
-   
+        .main {
+            margin: 0;
+            border: none;
+        }
 
-.content-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
+        /* .mainpicture {
+            height: 500px;
+            border: none;
+            background-image: url(images/Culture_Main.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
 
-    margin-bottom: 30px;
-}
+        .pagetitle {
+            color: white;
+            font-size: 20pt;
+            text-align: left;
+            padding-left: 20px;
+        }
 
-.minorPic_right, .minorPic_left {
-    width: 100%;
-    max-width: 300px;
-    height: 400px;
-    background-repeat: no-repeat;
-    /* ... */
-}
+        .introduction {
+            margin-top: -30px;
+            background-color: rgb(9, 9, 8);
+            color: white;
+            font-size: 15pt;
+            text-align: left;
+            height: 200px;
+            border: none;
+        }
 
-.cultureinrto_left, .cultureinrto_right {
-    width: 100%;
-    max-width: 450px;
-    font-size: 12pt;
-    text-align: left;
-    /* ... */
-}
+        .showblocks {
+            background-color: rgb(252, 252, 252);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
 
-   </style> 
+        .bottombar {
+            display: flex;
+            background-color: rgb(9, 9, 8);
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .bottominfo {
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottombar h5:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+        }
+
+
+        .content-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+
+            margin-bottom: 30px;
+        }
+
+        .minorPic_right,
+        .minorPic_left {
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            background-repeat: no-repeat;
+            /* ... */
+        }
+
+        .cultureinrto_left,
+        .cultureinrto_right {
+            width: 100%;
+            max-width: 450px;
+            font-size: 12pt;
+            text-align: left;
+            /* ... */
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- navigation -->
-<div class="navigation">
-    <div class="logo">
-        <img src="images/yunnan.jpg" width="200px" height="auto">
+    <div class="navigation">
+        <div class="logo">
+            <img src="images/logo.jpg" width="200px" height="auto">
+        </div>
+        <ul class="navilink">
+            <li><a href="">Destinations</a></li>
+            <li><a href="">Culture</a></li>
+            <li><a href="">Itineraries</a></li>
+            <li><a href="">Food & Drink</a></li>
+            <li><a href="">Accommodations</a></li>
+        </ul>
     </div>
-    <ul class="navilink">
-        <li><a href="">Destinations</a></li>
-        <li><a href="">Culture</a></li>
-        <li><a href="">Itineraries</a></li>
-        <li><a href="">Food & Drink</a></li>
-        <li><a href="">Accommodations</a></li>
-    </ul>
-</div>
 
-<!-- main -->
-    <div class="main">  
+    <!-- main -->
+    <div class="main">
 
-        <div class="mainpicture"></div>
+        <!-- <div class="mainpicture"></div> -->
+        <!-- change pics here for the original mainpicture class -->
+        <div class="imgBox">
+            <img class="img-slide img1" src="image2.0/titian.jpg" alt="1">
+            <img class="img-slide img2" src="image2.0/dali.jpg" alt="2">
+            <img class="img-slide img3" src="image2.0/aaa.jpg" alt="3">
+
+        </div>
         <div class="introduction">
-            <h2><br>&nbsp;&nbsp;Yunnan Province is home to the largest number of ethnic groups in China, <br>&nbsp;&nbsp;with 25 ethnic minorities.</h2>
+            <h2><br>&nbsp;&nbsp;Yunnan Province is home to the largest number of ethnic groups in China,
+                <br>&nbsp;&nbsp;with 25 ethnic minorities.
+            </h2>
         </div>
 
 
@@ -232,55 +278,63 @@
             <div class="content-item">
                 <img class="minorPic_right" src="images/Yi.jpg">
                 <div class="cultureinrto_left">
-                    <h3><h1>Yi nationality</h1>is the sixth largest ethnic minority in China. Its national 
-                        language is Yi, which belongs to the Yi branch of Tibeto-Burman language of 
-                        Sino-Tibetan family. It has 6 dialects in the north, east, south, southeast, 
+                    <h3>
+                        <h1>Yi nationality</h1>is the sixth largest ethnic minority in China. Its national
+                        language is Yi, which belongs to the Yi branch of Tibeto-Burman language of
+                        Sino-Tibetan family. It has 6 dialects in the north, east, south, southeast,
                         west and central, including 5 sub-dialects and 25 native languages.
-                        The Yi nationality is mainly distributed in the plateau and coastal hills of 
-                        Yunnan, Sichuan, Guizhou and Guangxi provinces (regions), and mainly gathered 
-                        in Chuxiong, Honghe, Liangshan, Bijie, Liupanshui and Anshun, etc. Liangshan Yi 
-                        Autonomous Prefecture is the largest inhabited area of Yi nationality in China.</h3>
+                        The Yi nationality is mainly distributed in the plateau and coastal hills of
+                        Yunnan, Sichuan, Guizhou and Guangxi provinces (regions), and mainly gathered
+                        in Chuxiong, Honghe, Liangshan, Bijie, Liupanshui and Anshun, etc. Liangshan Yi
+                        Autonomous Prefecture is the largest inhabited area of Yi nationality in China.
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_left" src="images/Bai.jpg">
                 <div class="cultureinrto_right">
-                    <h3><h1>The Bai nationality</h1> has its own national language, which belongs to the Yi 
-                        language branch of the Tibetan-Burman language family. The Chinese language 
-                        has been used by the Bai people since ancient times. The Bai nationality is 
-                        unique in art, and its architecture, sculpture and painting art are famous 
-                        all over the world. In the process of formation and development, it interacts 
+                    <h3>
+                        <h1>The Bai nationality</h1> has its own national language, which belongs to the Yi
+                        language branch of the Tibetan-Burman language family. The Chinese language
+                        has been used by the Bai people since ancient times. The Bai nationality is
+                        unique in art, and its architecture, sculpture and painting art are famous
+                        all over the world. In the process of formation and development, it interacts
                         with the surrounding ethnic groups and creates a brilliant economy and culture.
-                        Bai nationality is a high degree of settlement, there are Minjia, Lemo, Nama 
-                        three branches, deeply influenced by the Han culture.</h3>
+                        Bai nationality is a high degree of settlement, there are Minjia, Lemo, Nama
+                        three branches, deeply influenced by the Han culture.
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_right" src="images/Dai.jpg">
                 <div class="cultureinrto_left">
-                    <h3><h1>Dai</h1> (Roman alphabet: Dai), also known as Tai (Thai: Chu Kuai, Roman alphabet: Thai), 
-                        Shan (Roman alphabet: Shan), etc., the national language is Dai (Thai), a Sino-Tibetan 
-                        Zhuang Dong language family Zhuang Dai language branch.The Dai people regard peacocks 
-                        and elephants as mascots, and their folk stories are rich and colorful. The Dai people 
-                        like to live by water, and they love to be clean and often take a bath, and women like to 
-                        wash their hair, so they have the reputation of "a nation of water". In the past, the Dai 
-                        people generally believed in southern Buddhism and primitive religions.</h3>
+                    <h3>
+                        <h1>Dai</h1> (Roman alphabet: Dai), also known as Tai (Thai: Chu Kuai, Roman alphabet: Thai),
+                        Shan (Roman alphabet: Shan), etc., the national language is Dai (Thai), a Sino-Tibetan
+                        Zhuang Dong language family Zhuang Dai language branch.The Dai people regard peacocks
+                        and elephants as mascots, and their folk stories are rich and colorful. The Dai people
+                        like to live by water, and they love to be clean and often take a bath, and women like to
+                        wash their hair, so they have the reputation of "a nation of water". In the past, the Dai
+                        people generally believed in southern Buddhism and primitive religions.
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_left" src="images/Jingpo.jpg">
                 <div class="cultureinrto_right">
-                    <h3><h1>Jingpo nationality</h1> one of the ethnic minorities in China, has its own language 
-                        and written language. The language belongs to Tibeto-Burman language family of 
-                        Sino-Tibetan family. The five branch languages belong to Jingpo language branch 
-                        and Burman language branch, and the written languages are Jingpo and Zaiwa, which 
+                    <h3>
+                        <h1>Jingpo nationality</h1> one of the ethnic minorities in China, has its own language
+                        and written language. The language belongs to Tibeto-Burman language family of
+                        Sino-Tibetan family. The five branch languages belong to Jingpo language branch
+                        and Burman language branch, and the written languages are Jingpo and Zaiwa, which
                         are pinyin characters based on Latin alphabet.
-                        The Jingpo ethnic group is related to the ancient Diqiang people on the Qinghai-Tibet 
-                        Plateau. It has five sub-groups: Jingpo, Zaiwa, Lechi, Lang 'e and Pola. It mainly lives 
-                        in the mountainous area of Dehong Dai Jingpo Autonomous Prefecture in Yunnan Province, 
-                        and a few live in Nujiang Lisu Autonomous Prefecture bordering Kachin State in Myanmar. 
-                        Most of the Kachin ethnic groups in Myanmar are also deeply related to the Jingpo and 
-                        the Lisu ethnic groups in China.</h3>
+                        The Jingpo ethnic group is related to the ancient Diqiang people on the Qinghai-Tibet
+                        Plateau. It has five sub-groups: Jingpo, Zaiwa, Lechi, Lang 'e and Pola. It mainly lives
+                        in the mountainous area of Dehong Dai Jingpo Autonomous Prefecture in Yunnan Province,
+                        and a few live in Nujiang Lisu Autonomous Prefecture bordering Kachin State in Myanmar.
+                        Most of the Kachin ethnic groups in Myanmar are also deeply related to the Jingpo and
+                        the Lisu ethnic groups in China.
+                    </h3>
                 </div>
             </div>
 
@@ -288,89 +342,114 @@
             <div class="content-item">
                 <img class="minorPic_right" src="images/Bulang.jpg">
                 <div class="cultureinrto_left">
-                    <h3><h1>Bulang</h1>The Bulang people live in the mountainous area, the climate is 
-                        mild, abundant rainfall, very conducive to the growth of plants, so, "relying on the mountains 
-                        to eat the mountain" is a major feature of the survival of the mountain people. Like other 
+                    <h3>
+                        <h1>Bulang</h1>The Bulang people live in the mountainous area, the climate is
+                        mild, abundant rainfall, very conducive to the growth of plants, so, "relying on the mountains
+                        to eat the mountain" is a major feature of the survival of the mountain people. Like other
                         mountain nationalities, the advantaged geographical environment and abundant natural resources,
-                         especially the vast forest resources, make the Bulang nationality adapt to nature and survive
-                          from nature mainly by collecting, fishing and hunting and slash-and-burn. This way of living
-                           has formed a stable production customs and culture.</h3>
+                        especially the vast forest resources, make the Bulang nationality adapt to nature and survive
+                        from nature mainly by collecting, fishing and hunting and slash-and-burn. This way of living
+                        has formed a stable production customs and culture.
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_left" src="images/Lagu.jpg">
                 <div class="cultureinrto_right">
-                    <h3><h1>Lahu nationality</h1>The Lahu nationality has a long history and rich historical legends. Legend has it 
-                        that the ancestors of the Lahu nationality, who originally lived a hunting life, began 
-                        to migrate from north to south in pursuit of a red deer that had wandered into the dense 
+                    <h3>
+                        <h1>Lahu nationality</h1>The Lahu nationality has a long history and rich historical legends.
+                        Legend has it
+                        that the ancestors of the Lahu nationality, who originally lived a hunting life, began
+                        to migrate from north to south in pursuit of a red deer that had wandered into the dense
                         forests of the south and discovered lush grasslands. Its clothing features both the
-                         nomadic culture of the early north and the farming culture of the modern south, which 
-                         also reflects the historical and cultural changes.</h3>
+                        nomadic culture of the early north and the farming culture of the modern south, which
+                        also reflects the historical and cultural changes.
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_right" src="images/Hani.jpg">
                 <div class="cultureinrto_left">
-                    <h3><h1>Hani</h1>Hani's religious belief is mainly polytheistic worship and ancestor 
-                        worship. It is believed that there exist powerful gods of heaven, earth, dragon tree, 
-                        and village gods and home gods with the nature of protecting gods between heaven and 
-                        earth, and they must be sacrificed regularly to pray for blessing. For all kinds of 
-                        ghosts and spirits that bring diseases and disasters to people, they should be restricted 
-                        and driven away through sacrifice and witchcraft. The Hani people of Xishuangbanna hold 
-                        an annual ritual of "Longba Gate" (walled gate).</h3>
+                    <h3>
+                        <h1>Hani</h1>Hani's religious belief is mainly polytheistic worship and ancestor
+                        worship. It is believed that there exist powerful gods of heaven, earth, dragon tree,
+                        and village gods and home gods with the nature of protecting gods between heaven and
+                        earth, and they must be sacrificed regularly to pray for blessing. For all kinds of
+                        ghosts and spirits that bring diseases and disasters to people, they should be restricted
+                        and driven away through sacrifice and witchcraft. The Hani people of Xishuangbanna hold
+                        an annual ritual of "Longba Gate" (walled gate).
+                    </h3>
                 </div>
             </div>
             <div class="content-item">
                 <img class="minorPic_left" src="images/De_ang.jpg">
                 <div class="cultureinrto_right">
-                    <h3><h1>De 'ang nationality </h1>The dress of De 'ang nationality has a strong national color, 
-                        which reflects the unique aesthetics of the nation and its pursuit of beauty. De 'ang ethnic 
-                        men wear blue, black large front jacket and wide and short pants, wrapped in black and white 
-                        cloth headscarf, the two ends of the scarf decorated with colorful pompoms. Deang women wear 
-                        navy blue or black on the front of the short jacket and long skirt, with black cloth wrapped 
-                        head, on the front of the coat inlaid with two red strips of cloth, with four or five pairs 
-                        of big square silver buttons, woven colorful horizontal stripes on the long skirt. Young people 
-                        of both sexes like to wear silver collars, earmuffs, earrings and other jewelry.</h3>
+                    <h3>
+                        <h1>De 'ang nationality </h1>The dress of De 'ang nationality has a strong national color,
+                        which reflects the unique aesthetics of the nation and its pursuit of beauty. De 'ang ethnic
+                        men wear blue, black large front jacket and wide and short pants, wrapped in black and white
+                        cloth headscarf, the two ends of the scarf decorated with colorful pompoms. Deang women wear
+                        navy blue or black on the front of the short jacket and long skirt, with black cloth wrapped
+                        head, on the front of the coat inlaid with two red strips of cloth, with four or five pairs
+                        of big square silver buttons, woven colorful horizontal stripes on the long skirt. Young people
+                        of both sexes like to wear silver collars, earmuffs, earrings and other jewelry.
+                    </h3>
                 </div>
             </div>
 
 
         </div>
-        
-    <!-- bottombar -->
-<div class="bottombar">
-    <div class="bottominfo">
-        <h3>Find us on</h3>
-        <h5>Twitter</h5>
-        <h5>Instagram</h5>
-        <h5>Facebook</h5>
-        <h5>Youtube</h5>
-    </div>
-    <div class="bottominfo">
-        <h3>Contact us</h3>
-        <h5>Request a map</h5>
-        <h5>Site feedback</h5>
-        <h5>Need help?</h5>
-    </div>
-    <div class="bottominfo">
-        <h3>Help</h3>
-        <h5>Terms of use</h5>
-        <h5>Privacy Policy</h5>
-        <h5>Cookies</h5>
-        <h5>Manage privacy settings</h5>
-    </div>
-    <div class="bottominfo">
-        <h3>Our other sites</h3>
-        <h5>Media</h5>
-        <h5>The Visual Library</h5>
-        <h5>Travel Trade</h5>
-        <h5>Business Events</h5>
-    </div>
-    <div class="bottominfo">
-        <img src="images/Yunnan.jpg" alt="Logo" width="200px" height="auto">
-    </div>
-</div>
-    
+
+        <!-- bottombar -->
+        <div class="bottombar">
+            <div class="bottominfo">
+                <h3>Find us on</h3>
+                <h5>Twitter</h5>
+                <h5>Instagram</h5>
+                <h5>Facebook</h5>
+                <h5>Youtube</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Contact us</h3>
+                <h5>Request a map</h5>
+                <h5>Site feedback</h5>
+                <h5>Need help?</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Help</h3>
+                <h5>Terms of use</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Cookies</h5>
+                <h5>Manage privacy settings</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Our other sites</h3>
+                <h5>Media</h5>
+                <h5>The Visual Library</h5>
+                <h5>Travel Trade</h5>
+                <h5>Business Events</h5>
+            </div>
+            <div class="bottominfo">
+                <img src="images/Yunnan.jpg" alt="Logo" width="200px" height="auto">
+            </div>
+        </div>
+
     </div>
 </body>
+<script type="text/javascript">
+    var index = 0;
+
+    function ChangeImg() {
+        index++;
+        var a = document.getElementsByClassName("img-slide");
+        if (index >= a.length) index = 0;
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.display = 'none';
+        }
+        a[index].style.display = 'block';
+    }
+
+    setInterval(ChangeImg, 2000);
+</script>
+
 </html>
