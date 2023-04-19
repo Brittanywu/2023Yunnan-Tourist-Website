@@ -32,6 +32,7 @@
         .mainMap {
             margin-left: -10px;
             margin-right: -10px;
+            border: none;
 
         }
 
@@ -103,6 +104,17 @@
             flex: 1;
         }
 
+        .margin-both-side {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: rgb(72, 72, 72);
+
+        }
+
+        .margin-oneside-left {
+            margin-left: 30px;
+        }
+
         .hvr-grow-shadow {
             vertical-align: middle;
             -webkit-transform: perspective(1px) translateZ(0);
@@ -169,21 +181,66 @@
             border-radius: 40px;
             text-align: center;
             margin-top: 10px;
+            color: white;
         }
 
-        @media screen and (max-width: 768px) {
+        button:hover {
+            background-color: darkgray;
+            color: white;
+            border: 1px white solid;
+        }
+
+        button:active,
+        button:focus {
+            background-color: white;
+            color: black;
+            border: 1px black solid;
+        }
+
+        @media only screen and (max-width: 950px) {
+            .recommendit {
+                margin-left: 50px;
+                margin-right: 50px;
+                text-align: center;
+            }
+
             .everydayit {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                border: 1px solid gray;
+                display: flex;
                 flex-direction: column;
-                height: auto;
+                overflow: hidden;
+                height: 100vh;
+                position: relative;
             }
 
             .everydayit .leftIntro {
-                padding: 10px;
+                text-align: left;
+                flex: 1;
+                min-height: 0;
+                margin-bottom: 100px;
             }
 
             .everydayit .rightImg {
-                height: 200px;
+                background-size: cover;
+                background-position: center;
+                flex: 1;
+                min-height: 0;
+                height: 400px;
             }
+
+            .margin-both-side {
+                margin-left: 5px;
+                margin-right: 5px;
+                color: rgb(72, 72, 72);
+
+            }
+
+            .margin-oneside-left {
+                margin-left: 5px;
+            }
+
         }
     </style>
 </head>
@@ -207,10 +264,7 @@
     <div class="mainMap">
         <div class="mapImg"></div>
         <div class="introduction">
-            <br>
-            <a href="" style="float: left;">&emsp;<u>Home</u>&emsp;&gt;</a>
-            <a href="" style="float: left;"> &emsp;<u>Itineraries</u></a>
-            <br>
+
 
             <div class="stateit">
                 <h1>
@@ -224,68 +278,145 @@
     </div>
     <div class="recommendit">
         <h2><br>Recommended Itineraries</h2>
-        <p style="color: rgb(95, 95, 95);">line 1/2/3/4</p>
-        <button>
-            <h3 style="color: white;">LINE1</h3>
+        <p id="line-text" style="color: rgb(95, 95, 95);">choose a travel line</p>
+        <button onclick="changeLine('line1')">
+            <h3>ROUTE1</h3>
         </button>
-        <button>
-            <h3 style="color: white;">LINE2</h3>
+        <button onclick="changeLine('line2')">
+            <h3>ROUTE2</h3>
         </button>
-        <button>
-            <h3 style="color: white;">LINE3</h3>
+        <button onclick="changeLine('line3')">
+            <h3>ROUTE3</h3>
         </button>
-        <button>
-            <h3 style="color: white;">LINE4</h3>
+        <button onclick="changeLine('line4')">
+            <h3>ROUTE4</h3>
         </button>
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
-                <h1>&emsp;Day 1 : Spend the day in xxx</h1>
-                <h3 style="margin-left: 30px;">Cuihu Park:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;It used to be a bay in the Dianchi Lake,
-                    but later became a clear lake due to the declining water level.
-                    It is one of the most beautiful parks in the urban area,
-                    known as the "beautiful jade in the city".</p>
-                <h3 style="margin-left: 30px;">Transport:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;Take bus No. 100, 101, 133, 235 or z5 and get off at Cuihu Dongmen Station</p>
+                <h1 id="Day1">Day 1 : Dali</h1>
+                <h3 class="margin-oneside-left">Morning:</h3>
+                <p id="Morning1" class="margin-both-side">
+                    &emsp;&emsp;Arrive in Dali and check into hotel</p>
+                <h3 class="margin-oneside-left">Afternoon:</h3>
+                <p id="Afternoon1" class="margin-both-side">
+                    &emsp;&emsp;Visit Dali Old Town and explore the local markets</p>
+                <h3 class="margin-oneside-left">Evening:</h3>
+                <p id="Evening1" class="margin-both-side">
+                    &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant</p>
+
             </div>
             <div class="rightImg" style="background-image: url(images/shuanglangpark.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
-            <div class="leftIntro">
-                <h1>&emsp;Day 2 : Spend the day in xxx</h1>
-                <h3 style="margin-left: 30px;">Cuihu Park:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;It used to be a bay in the Dianchi Lake,
-                    but later became a clear lake due to the declining water level.
-                    It is one of the most beautiful parks in the urban area,
-                    known as the "beautiful jade in the city".</p>
-                <h3 style="margin-left: 30px;">Transport:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;Take bus No. 100, 101, 133, 235 or z5 and get off at Cuihu Dongmen Station</p>
+            <div id="leftIntro2" class="leftIntro">
+                <h1 id="Day2">Day 2 : Dali</h1>
+                <h3 class="margin-oneside-left">Morning:</h3>
+                <p id="Morning2" class="margin-both-side">
+                    &emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village</p>
+                <h3 class="margin-oneside-left">Afternoon:</h3>
+                <p id="Afternoon2" class="margin-both-side">
+                    &emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple</p>
+                <h3 class="margin-oneside-left">Evening:</h3>
+                <p id="Evening2" class="margin-both-side">
+                    &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife</p>
+
             </div>
             <div class="rightImg" style="background-image: url(images/route.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
-                <h1>&emsp;Day 3 : Spend the day in xxx</h1>
-                <h3 style="margin-left: 30px;">Cuihu Park:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;It used to be a bay in the Dianchi Lake,
-                    but later became a clear lake due to the declining water level.
-                    It is one of the most beautiful parks in the urban area,
-                    known as the "beautiful jade in the city".</p>
-                <h3 style="margin-left: 30px;">Transport:</h3>
-                <p style="margin-left: 50px;margin-right: 50px;color: rgb(72, 72, 72);">
-                    &emsp;&emsp;Take bus No. 100, 101, 133, 235 or z5 and get off at Cuihu Dongmen Station</p>
+                <h1 id="Day3">Day 3 : Lijiang</h1>
+                <h3 class="margin-oneside-left">Morning:</h3>
+                <p id="Morning3" class="margin-both-side">
+                    &emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel</p>
+                <h3 class="margin-oneside-left">Afternoon:</h3>
+                <p id="Afternoon3" class="margin-both-side">
+                    &emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture</p>
+                <h3 class="margin-oneside-left">Evening:</h3>
+                <p id="Evening3" class="margin-both-side">
+                    &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant</p>
             </div>
             <div class="rightImg" style="background-image: url(images/hotel.jpg);"></div>
         </div>
 
+
     </div>
+    <script>
+        function changeLine(line) {
+            if (line == "line1") {
+                document.getElementById("line-text").innerText = "Route 1 : Kunming-Dali-Lijiang";
+                document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
+                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
+                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Dali, a beautiful ancient town";
+
+                document.getElementById("Day2").innerText = "Day 2 : Dali";
+                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
+                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
+                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+
+                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+            }
+            if (line == "line2") {
+                document.getElementById("line-text").innerText = "Route 2 :  Kunming-Jianshui-Yuanyang";
+                document.getElementById("Day1").innerText = "Day 1: Arrival in Kunming";
+                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
+                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Jianshui, a small town with a rich history and culture.";
+
+                document.getElementById("Day2").innerText = "Day 2: Jianshui";
+                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Visit the Chaoyang Gate, a well-preserved ancient city gate, and the Confucius Temple";
+                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Double Dragon Bridge, the largest and best-preserved ancient bridge in China, and the Zhu Family Garden";
+                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Enjoy local cuisine in a night market in Jianshui.";
+
+                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a bus from Jianshui to Yuanyang and arrive in Yuanyang in the morning. Visit the Yuanyang Rice Terraces, a UNESCO World Heritage Site, and enjoy the spectacular scenery of the terraces.";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the local ethnic markets in Yuanyang and learn about the culture and traditions of the Hani and Yi minorities";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Stay in a local guesthouse and enjoy a hot spring bath";
+            }
+            if (line == "line3") {
+                document.getElementById("line-text").innerText = "Route 1 : Dali - Dali - Lijiang";
+                document.getElementById("Day1").innerText = "Day 1 : Dali";
+                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Arrive in Dali and check into hotel";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit Dali Old Town and explore the local markets";
+                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant";
+
+                document.getElementById("Day2").innerText = "Day 2 : Dali";
+                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
+                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
+                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+
+                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+            }
+            if (line == "line4") {
+                document.getElementById("line-text").innerText = "Route 1 : Dali - Dali - Lijiang";
+                document.getElementById("Day1").innerText = "Day 1 : Dali";
+                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Arrive in Dali and check into hotel";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit Dali Old Town and explore the local markets";
+                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant";
+
+                document.getElementById("Day2").innerText = "Day 2 : Dali";
+                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
+                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
+                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+
+                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+            }
+        }
+
+
+    </script>
 
 
     <div class="bottombar">
