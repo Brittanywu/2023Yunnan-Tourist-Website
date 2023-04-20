@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .minorPic_right {
             width: 300px;
@@ -38,16 +40,14 @@
         /*top and bottom*/
         .navigation {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            background-color: rgb(9, 9, 8);
             padding: 10px 20px;
-            background-color: rgb(1, 1, 1);
-            height: 90px;
         }
 
         .navilink {
             display: flex;
-            gap: 20px;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -55,8 +55,8 @@
 
         .navilink li {
             margin-left: 20px;
-            cursor: pointer;
         }
+
 
         .navilink li a {
             color: white;
@@ -197,6 +197,55 @@
 
             margin-bottom: 30px;
         }
+     @media (max-width: 767px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navilink {
+        display: none;
+    }
+    .introduction{
+        text-align: center;
+    }
+    .bottombar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottominfo {
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 20px;
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navilink {
+        padding-top: 10px;
+    }
+    
+    .navilink li {
+        margin-left: relative;
+        margin-bottom: 10px;
+    }
+    .mustdo{
+        text-align: center;
+    }
+    .bottombar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottominfo {
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 20px;
+    }
+    }
     </style>
 </head>
 
@@ -205,7 +254,7 @@
     <!-- navigation -->
     <div class="navigation">
         <div class="logo">
-            <img src="images/logo.jpg" width="200px" height="auto">
+            <img src="images/yunnan.jpg" alt="Logo" width="200px" height="auto">
         </div>
         <ul class="navilink">
             <li><a href="">Destinations</a></li>
@@ -497,7 +546,7 @@
                 <h5>Business Events</h5>
             </div>
             <div class="bottominfo">
-                <img src="images/logo.jpg" alt="Logo" width="200px" height="auto">
+                <img src="images/yunnan.jpg" alt="Logo" width="200px" height="auto">
             </div>
         </div>
 
