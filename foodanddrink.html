@@ -3,6 +3,8 @@
 
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
@@ -11,15 +13,14 @@
 
         .navigation {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            background-color: rgb(9, 9, 8);
             padding: 10px 20px;
-            background-color: rgb(1, 1, 1);
         }
 
         .navilink {
             display: flex;
-            gap: 20px;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -27,8 +28,8 @@
 
         .navilink li {
             margin-left: 20px;
-            cursor: pointer;
         }
+
 
         .navilink li a {
             color: white;
@@ -143,12 +144,11 @@
             display: none;
             margin-top: 50px;
             width: 100%;
-            /* 修改为 100% 以适应容器宽度 */
+   
             height: 400px;
-            /* 修改为 auto 以保持图片纵横比 */
+  
             max-width: 700px;
-            /* 添加 max-width 以限制图片最大宽度 */
-            /* 修改为 cover 以保持图片纵横比 */
+        
             margin: 0 auto;
             justify-content: center;
 
@@ -177,6 +177,55 @@
         .image-slider .right-arrow {
             right: 10px;
         }
+        @media (max-width: 767px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navilink {
+        display: none;
+    }
+    .introduction{
+        text-align: center;
+    }
+    .bottombar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottominfo {
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 20px;
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navilink {
+        padding-top: 10px;
+    }
+    
+    .navilink li {
+        margin-left: relative;
+        margin-bottom: 10px;
+    }
+    .mustdo{
+        text-align: center;
+    }
+    .bottombar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottominfo {
+        margin-bottom: 20px;
+        text-align: center;
+        padding-left: 20px;
+    }
+    }
     </style>
 
 </head>
@@ -185,7 +234,7 @@
     <!-- navigation -->
     <div class="navigation">
         <div class="logo">
-            <img src="image2.0/logo.jpg">
+            <img src="images/yunnan.jpg" alt="Logo" width="200px" height="auto">
         </div>
         <ul class="navilink">
             <li><a href="">Destinations</a></li>
@@ -423,7 +472,7 @@
             <h5>Business Events</h5>
         </div>
         <div class="bottominfo">
-            <img src="image2.0/logo.jpg" alt="Logo">
+            <img src="images/yunnan.jpg" alt="Logo" width="200px" height="auto">
         </div>
     </div>
     <script>
