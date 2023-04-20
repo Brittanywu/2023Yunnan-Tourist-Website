@@ -43,6 +43,11 @@
             background-repeat: no-repeat;
         }
 
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
         .introduction {
             margin-top: -30px;
             background-color: rgb(9, 9, 8);
@@ -248,7 +253,7 @@
 <body>
     <div class="navigation">
         <div class="logo">
-            <img src="images/logo.jpg">
+            <img src="images/logo.jpg" width="200px" height="auto">
         </div>
 
         <ul class="navilink">
@@ -262,7 +267,161 @@
 
     </div>
     <div class="mainMap">
-        <div class="mapImg"></div>
+        <div id="map"></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjuqZTRVj78xrD4u09bmYymJ6NCaxP-KM"></script>
+        <script>
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 25.0459, lng: 102.7103 },
+                    zoom: 7
+                });
+
+                // Kunming marker
+                var kunmingMarker = new google.maps.Marker({
+                    position: { lat: 25.0459, lng: 102.7103 },
+                    map: map,
+                    title: 'Kunming'
+                });
+
+                // Dali marker
+                var daliMarker = new google.maps.Marker({
+                    position: { lat: 25.6065, lng: 100.2676 },
+                    map: map,
+                    title: 'DaLi'
+                });
+
+                // Lijiang marker
+                var lijiangMarker = new google.maps.Marker({
+                    position: { lat: 26.855, lng: 100.2271 },
+                    map: map,
+                    title: 'Lijiang'
+                });
+
+                // Jianshui marker
+                var jianshuiMarker = new google.maps.Marker({
+                    position: { lat: 23.6068, lng: 102.833 },
+                    map: map,
+                    title: 'Jianshui'
+                });
+
+                // Yuanyang marker
+                var yuanyangMarker = new google.maps.Marker({
+                    position: { lat: 23.0965, lng: 102.7092 },
+                    map: map,
+                    title: 'Yuanyang'
+                });
+
+                // Shangri-La marker
+                var shangriLaMarker = new google.maps.Marker({
+                    position: { lat: 27.8252, lng: 99.7077 },
+                    map: map,
+                    title: 'Shangri-La'
+                });
+
+                // Tiger Leaping Gorge marker
+                var tigerLeapingGorgeMarker = new google.maps.Marker({
+                    position: { lat: 27.2248, lng: 100.1123 },
+                    map: map,
+                    title: 'Tiger Leaping Gorge'
+                });
+
+                // Kunming-Dali-Lijiang polyline
+                var kunmingDaliLijiangPath = [
+                    { lat: 25.0459, lng: 102.7103 },
+                    { lat: 25.6065, lng: 100.2676 },
+                    { lat: 26.855, lng: 100.2271 }
+                ];
+                var kunmingDaliLijiangPolyline = new google.maps.Polyline({
+                    path: kunmingDaliLijiangPath,
+                    geodesic: true,
+                    strokeColor: '#802A2A',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 3
+                });
+                kunmingDaliLijiangPolyline.setMap(map);
+
+                var kunmingDaliLijiangInfoWindow = new google.maps.InfoWindow({
+                    content: '<h3>Route 1: Kunming-Dali-Lijiang</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
+                });
+
+                kunmingDaliLijiangPolyline.addListener('click', function (event) {
+                    kunmingDaliLijiangInfoWindow.setPosition(event.latLng);
+                    kunmingDaliLijiangInfoWindow.open(map);
+                });
+
+                // kunming-Jianshui-Yuanyang polyline
+                var kunmingJianshuiYuanyangPath = [
+                    { lat: 25.0459, lng: 102.7103 },
+                    { lat: 23.6068, lng: 102.833 },
+                    { lat: 23.0965, lng: 102.7092 }
+                ];
+                var kunmingJianshuiYuanyangPolyline = new google.maps.Polyline({
+                    path: kunmingJianshuiYuanyangPath,
+                    geodesic: true,
+                    strokeColor: '#FAFFF0',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 3
+                });
+                kunmingJianshuiYuanyangPolyline.setMap(map);
+                var kunmingJianshuiYuanyangInfoWindow = new google.maps.InfoWindow({
+                    content: '<h3>Route 2 : Kunming - Jianshui - Yuanyang</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
+                });
+
+                kunmingJianshuiYuanyangPolyline.addListener('click', function (event) {
+                    kunmingJianshuiYuanyangInfoWindow.setPosition(event.latLng);
+                    kunmingJianshuiYuanyangInfoWindow.open(map);
+                });
+
+                // Kunming - Shangri-La polyline
+                var kunmingShangriLaPath = [
+                    { lat: 25.0459, lng: 102.7103 },
+                    { lat: 27.8252, lng: 99.7077 }
+                ];
+                var kunmingShangriLaPolyline = new google.maps.Polyline({
+                    path: kunmingShangriLaPath,
+                    geodesic: true,
+                    strokeColor: '#1E90FF',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 3
+                });
+                kunmingShangriLaPolyline.setMap(map);
+                var kunmingShangriLaInfoWindow = new google.maps.InfoWindow({
+                    content: '<h3>Route 3 :  Kunming - Shangri-La</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
+                });
+
+                kunmingShangriLaPolyline.addListener('click', function (event) {
+                    kunmingShangriLaInfoWindow.setPosition(event.latLng);
+                    kunmingShangriLaInfoWindow.open(map);
+                });
+
+                //  Lijiang - Tiger Leaping Gorge polyline
+                var LijiangTigerPath = [
+                    { lat: 26.855, lng: 100.2271 },
+                    { lat: 27.2248, lng: 100.1123 }
+                ];
+                var LijiangTigerPolyline = new google.maps.Polyline({
+                    path: LijiangTigerPath,
+                    geodesic: true,
+                    strokeColor: '#A066D3',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 3
+                });
+                LijiangTigerPolyline.setMap(map);
+                var kunmingShangriLaInfoWindow = new google.maps.InfoWindow({
+                    content: '<h3>Route 4 : Lijiang - Tiger Leaping Gorge</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
+                });
+
+                LijiangTigerPolyline.addListener('click', function (event) {
+                    LijiangTigerInfoWindow.setPosition(event.latLng);
+                    LijiangTigerWindow.open(map);
+                });
+            }
+            initMap();
+
+        </script>
+
+
         <div class="introduction">
 
 
@@ -305,7 +464,7 @@
                     &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant</p>
 
             </div>
-            <div class="rightImg" style="background-image: url(images/shuanglangpark.jpg);"></div>
+            <div id="img1" class="rightImg" style="background-image: url(images/route.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
@@ -322,7 +481,7 @@
                     &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife</p>
 
             </div>
-            <div class="rightImg" style="background-image: url(images/route.jpg);"></div>
+            <div id="img2" class="rightImg" style="background-image: url(images/route.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
@@ -338,7 +497,7 @@
                 <p id="Evening3" class="margin-both-side">
                     &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant</p>
             </div>
-            <div class="rightImg" style="background-image: url(images/hotel.jpg);"></div>
+            <div id="img3" class="rightImg" style="background-image: url(images/hotel.jpg);"></div>
         </div>
 
 
@@ -351,6 +510,9 @@
                 document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
                 document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Dali, a beautiful ancient town";
+                var Image1M = document.getElementById("img1");
+                Image1M.style.backgroundImage="url(images/accom1.jpg)"
+                
 
                 document.getElementById("Day2").innerText = "Day 2 : Dali";
                 document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
@@ -363,13 +525,13 @@
                 document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
             }
             if (line == "line2") {
-                document.getElementById("line-text").innerText = "Route 2 :  Kunming-Jianshui-Yuanyang";
-                document.getElementById("Day1").innerText = "Day 1: Arrival in Kunming";
+                document.getElementById("line-text").innerText = "Route 2 :  Kunming - Jianshui - Yuanyang";
+                document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
                 document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
                 document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Jianshui, a small town with a rich history and culture.";
 
-                document.getElementById("Day2").innerText = "Day 2: Jianshui";
+                document.getElementById("Day2").innerText = "Day 2 : Jianshui";
                 document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Visit the Chaoyang Gate, a well-preserved ancient city gate, and the Confucius Temple";
                 document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Double Dragon Bridge, the largest and best-preserved ancient bridge in China, and the Zhu Family Garden";
                 document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Enjoy local cuisine in a night market in Jianshui.";
@@ -380,38 +542,38 @@
                 document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Stay in a local guesthouse and enjoy a hot spring bath";
             }
             if (line == "line3") {
-                document.getElementById("line-text").innerText = "Route 1 : Dali - Dali - Lijiang";
-                document.getElementById("Day1").innerText = "Day 1 : Dali";
-                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Arrive in Dali and check into hotel";
-                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit Dali Old Town and explore the local markets";
-                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant";
+                document.getElementById("line-text").innerText = "Route 3 : Kunming - Shangri-La";
+                document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
+                document.getElementById("Morning1").innerHTML = "  &emsp;&emsp;Arrive at Kunming Changshui International Airport and take a shuttle bus or taxi to the city center. Visit the Green Lake Park to enjoy the scenery and fresh air.";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming, and taste local snacks at Jinma Biji Archway Square.";
+                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Shangri-La, a mythical and picturesque town in the northwest of Yunnan.";
 
-                document.getElementById("Day2").innerText = "Day 2 : Dali";
-                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
-                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
-                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+                document.getElementById("Day2").innerText = "Day 2 : Shangri-La";
+                document.getElementById("Morning2").innerHTML = "Arrive in Shangri-La in the morning and check into a hotel. Visit the Songzanlin Monastery, the largest Tibetan Buddhist monastery in Yunnan.";
+                document.getElementById("Afternoon2").innerHTML = "Visit the Dukezong Ancient Town, a well-preserved Tibetan town with distinctive architecture and cultural relics. Walk around the old alleys, visit the local market, and taste local snacks.";
+                document.getElementById("Evening2").innerHTML = "Enjoy a bonfire party and traditional Tibetan dance and music performance in a local Tibetan family.";
 
-                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
-                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
-                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
-                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+                document.getElementById("Day3").innerText = "Day 3 : Napa Lake and Potatso National Park";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a bus to the Napa Lake and enjoy the breathtaking scenery of the highland wetlands and birds.";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Potatso National Park, the first national park in mainland China and a paradise for nature lovers. Take a boat ride on the Shudu Lake and hike in the virgin forests to enjoy the stunning views of mountains, waterfalls, and wildlife.";
+                document.getElementById("Evening3").innerHTML = "&emsp;&emsp;Return to Shangri-La and enjoy a farewell dinner with local delicacies.";
             }
             if (line == "line4") {
-                document.getElementById("line-text").innerText = "Route 1 : Dali - Dali - Lijiang";
-                document.getElementById("Day1").innerText = "Day 1 : Dali";
-                document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Arrive in Dali and check into hotel";
-                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit Dali Old Town and explore the local markets";
-                document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant";
+                document.getElementById("line-text").innerText = "Route 4 : Lijiang - Tiger Leaping Gorge";
+                document.getElementById("Day1").innerText = "Day 1 : Arrival in Lijiang";
+                document.getElementById("Morning1").innerHTML = " &emsp;&emsp;Arrive in Lijiang and check into a hotel. Visit the Lijiang Old Town, a UNESCO World Heritage Site, and learn about the Naxi culture and architecture.";
+                document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Black Dragon Pool Park, a famous scenic spot in Lijiang with beautiful gardens, temples, and the iconic Jade Dragon Snow Mountain in the background.";
+                document.getElementById("Evening1").innerHTML = "&emsp;&emsp;Enjoy the nightlife in Lijiang with local music, food, and drinks.";
 
-                document.getElementById("Day2").innerText = "Day 2 : Dali";
-                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
-                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
-                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+                document.getElementById("Day2").innerText = "Day 2 : Tiger Leaping Gorge";
+                document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a bus to the Tiger Leaping Gorge, one of the deepest and most spectacular gorges in the world. Start the trekking from Qiaotou Town to Halfway Guesthouse.";
+                document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Continue trekking to the Walnut Garden or the 28 Bends and enjoy the amazing scenery of the gorge.";
+                document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Stay at a guesthouse and enjoy a traditional hot pot dinner with the locals.";
 
-                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
-                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
-                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
-                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+                document.getElementById("Day3").innerText = "Day 3 : Back to Lijiang";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;;Continue trekking to Tina's Guesthouse and take a car back to Lijiang.";
+                document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Baisha Village, another ancient town in Lijiang with unique architecture and murals. Take a workshop to learn the traditional embroidery or painting techniques from the locals.";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;;Have a farewell dinner with Yunnan cuisine and watch the Naxi music and dance performance.";
             }
         }
 
@@ -448,7 +610,7 @@
             <h5>Business Events</h5>
         </div>
         <div class="bottominfo">
-            <img src="images/logo.jpg" alt="Logo">
+            <img src="images/logo.jpg" alt="Logo" width="200px" height="auto">
         </div>
     </div>
 </body>
