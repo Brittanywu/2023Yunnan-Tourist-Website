@@ -36,41 +36,22 @@
 
         }
 
-        .mapImg {
-            height: 550px;
-            background-image: url(images/culture.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
         #map {
-            height: 500px;
+            height: 550px;
             width: 100%;
         }
 
+
         .introduction {
-            margin-top: -30px;
             background-color: rgb(9, 9, 8);
             color: white;
             font-size: 15pt;
             text-align: left;
-            border: none;
+            padding: 30px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        .stateit {
-            height: 300px;
-            width: 650px;
-            margin-left: 50px;
-            display: inline-block;
-        }
-
-        .chooseit {
-            height: 150px;
-            width: 650px;
-            display: inline-block;
-            margin-left: 30px;
-            border-left: 10px whitesmoke;
-        }
 
         .travelLine {
             margin-left: 10px;
@@ -202,7 +183,112 @@
             border: 1px black solid;
         }
 
-        @media only screen and (max-width: 950px) {
+        @media (max-width: 767px) {
+            .navigation {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navilink {
+                display: none;
+            }
+
+            .introduction {
+                text-align: center;
+            }
+
+            .recommendit {
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: center;
+            }
+
+            .everydayit {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                border: 1px solid gray;
+                display: flex;
+                flex-direction: column-reverse;
+                overflow: hidden;
+                height: 100vh;
+                position: relative;
+            }
+
+            .everydayit .leftIntro {
+                text-align: left;
+                flex: 1;
+                min-height: 0;
+                margin-bottom: 100px;
+            }
+
+            .everydayit .rightImg {
+                background-size: cover;
+                background-position: center;
+                flex: 1;
+                min-height: 0;
+                height: 200px;
+            }
+
+            .margin-both-side {
+                margin-left: 5px;
+                margin-right: 5px;
+                color: rgb(72, 72, 72);
+
+            }
+
+            .size {
+                font-size: 90%;
+            }
+
+            .margin-oneside-left {
+                margin-left: 5px;
+            }
+
+            .bottombar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bottominfo {
+                margin-bottom: 20px;
+                text-align: center;
+                padding-left: 20px;
+            }
+
+            button {
+                width: 130px;
+                height: 40px;
+            }
+
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navigation {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navilink {
+                padding-top: 10px;
+            }
+
+            .navilink li {
+                margin-left: relative;
+                margin-bottom: 10px;
+            }
+
+
+            .bottombar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bottominfo {
+                margin-bottom: 20px;
+                text-align: center;
+                padding-left: 20px;
+            }
+
             .recommendit {
                 margin-left: 50px;
                 margin-right: 50px;
@@ -214,10 +300,10 @@
                 margin-bottom: 50px;
                 border: 1px solid gray;
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
                 overflow: hidden;
-                height: 100vh;
-                position: relative;
+                height: 70vh;
+
             }
 
             .everydayit .leftIntro {
@@ -245,6 +331,11 @@
             .margin-oneside-left {
                 margin-left: 5px;
             }
+
+            button {
+                width: 150px;
+            }
+
 
         }
     </style>
@@ -423,81 +514,84 @@
 
 
         <div class="introduction">
-
-
-            <div class="stateit">
-                <h1>
-                    Whether you're visiting Yunnan for a few days or a few weeks,
-                    you'll find ideas here to help you plan your trip.
-                    <br>
-                </h1>
-            </div>
+            <h1 class="size">
+                <br>
+                Whether you're visiting Yunnan for a few days or a few weeks,
+                you'll find ideas here to help you plan your trip.
+                <br>
+            </h1>
         </div>
 
     </div>
     <div class="recommendit">
-        <h2><br>Recommended Itineraries</h2>
-        <p id="line-text" style="color: rgb(95, 95, 95);">choose a travel line</p>
+        <h2 class="size"><br>Recommended Itineraries</h2>
+        <p id="line-text" class="size" style="color: rgb(95, 95, 95);">choose a travel line</p>
         <button onclick="changeLine('line1')">
-            <h3>ROUTE1</h3>
+            <h3 class="size">ROUTE1</h3>
         </button>
         <button onclick="changeLine('line2')">
-            <h3>ROUTE2</h3>
+            <h3 class="size">ROUTE2</h3>
         </button>
         <button onclick="changeLine('line3')">
-            <h3>ROUTE3</h3>
+            <h3 class="size">ROUTE3</h3>
         </button>
         <button onclick="changeLine('line4')">
-            <h3>ROUTE4</h3>
+            <h3 class="size">ROUTE4</h3>
         </button>
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
-                <h1 id="Day1">Day 1 : Dali</h1>
-                <h3 class="margin-oneside-left">Morning:</h3>
-                <p id="Morning1" class="margin-both-side">
-                    &emsp;&emsp;Arrive in Dali and check into hotel</p>
-                <h3 class="margin-oneside-left">Afternoon:</h3>
-                <p id="Afternoon1" class="margin-both-side">
-                    &emsp;&emsp;Visit Dali Old Town and explore the local markets</p>
-                <h3 class="margin-oneside-left">Evening:</h3>
-                <p id="Evening1" class="margin-both-side">
-                    &emsp;&emsp;Enjoy a relaxing evening at a local bar or restaurant</p>
+                <h1 id="Day1" class="size">Dali</h1>
+                <h3 class="margin-oneside-left size">Three Pagodas:</h3>
+                <p id="Morning1" class="margin-both-side size">
+                    &emsp;&emsp;A complex of three ancient Buddhist pagodas standing by the Cangshan Mountains.</p>
+                <h3 class="margin-oneside-left sizeh3">Erhai Lake:</h3>
+                <p id="Afternoon1" class="margin-both-side size">
+                    &emsp;&emsp; A large freshwater lake that offers scenic views and is a popular spot for boating and
+                    fishing.</p>
+                <h3 class="margin-oneside-left size">Old Town of Dali:</h3>
+                <p id="Evening1" class="margin-both-side size">
+                    &emsp;&emsp;A historic walled city with traditional Bai architecture, bustling markets, and vibrant
+                    nightlife.</p>
 
             </div>
-            <div id="img1" class="rightImg" style="background-image: url(images/route.jpg);"></div>
+            <div id="img1" class="rightImg" style="background-image: url(itineraries_img/dali/dali2.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div id="leftIntro2" class="leftIntro">
-                <h1 id="Day2">Day 2 : Dali</h1>
-                <h3 class="margin-oneside-left">Morning:</h3>
-                <p id="Morning2" class="margin-both-side">
-                    &emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village</p>
-                <h3 class="margin-oneside-left">Afternoon:</h3>
-                <p id="Afternoon2" class="margin-both-side">
-                    &emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple</p>
-                <h3 class="margin-oneside-left">Evening:</h3>
-                <p id="Evening2" class="margin-both-side">
-                    &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife</p>
+                <h1 id="Day2" class="size">Pu'er</h1>
+                <h3 class="margin-oneside-left size">Jingmai Mountain:</h3>
+                <p id="Morning2" class="margin-both-side  size">
+                    &emsp;&emsp;A scenic mountainous area that produces high-quality Pu'er tea.</p>
+                <h3 class="margin-oneside-left size">Banpo Tea Garden:</h3>
+                <p id="Afternoon2" class="margin-both-side size">
+                    &emsp;&emsp;A picturesque tea garden located in the Lancang River valley.</p>
+                <h3 class="margin-oneside-left size">Simao Ancient City:</h3>
+                <p id="Evening2" class="margin-both-side size">
+                    &emsp;&emsp;An ancient town with well-preserved Ming and Qing dynasty architecture and a tea market.
+                </p>
 
             </div>
-            <div id="img2" class="rightImg" style="background-image: url(images/route.jpg);"></div>
+            <div id="img2" class="rightImg" style="background-image: url(itineraries_img/puer/puer1.jpg);"></div>
         </div>
 
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
-                <h1 id="Day3">Day 3 : Lijiang</h1>
-                <h3 class="margin-oneside-left">Morning:</h3>
-                <p id="Morning3" class="margin-both-side">
-                    &emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel</p>
-                <h3 class="margin-oneside-left">Afternoon:</h3>
-                <p id="Afternoon3" class="margin-both-side">
-                    &emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture</p>
-                <h3 class="margin-oneside-left">Evening:</h3>
-                <p id="Evening3" class="margin-both-side">
-                    &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant</p>
+                <h1 id="Day3" class="size">Shangri-La</h1>
+                <h3 class="margin-oneside-left size">Pudacuo National Park:</h3>
+                <p id="Morning3" class="margin-both-side  size">
+                    &emsp;&emsp;A stunning nature reserve with pristine lakes, forests, and mountains.</p>
+                <h3 class="margin-oneside-left size">Songzanlin Monastery:</h3>
+                <p id="Afternoon3" class="margin-both-side size">
+                    &emsp;&emsp; A Tibetan Buddhist monastery known as the "Little Potala Palace" for its grand
+                    architecture and religious significance.</p>
+                <h3 class="margin-oneside-left">Dukezong Ancient Town:</h3>
+                <p id="Evening3" class="margin-both-side size">
+                    &emsp;&emsp;A historic town with traditional Tibetan houses, narrow streets, and a famous tower
+                    offering panoramic views of the city.</p>
             </div>
-            <div id="img3" class="rightImg" style="background-image: url(images/hotel.jpg);"></div>
+            <div id="img3" class="rightImg" style="background-image: url(itineraries_img/Shangri-La/Shangri-La1.jpg);">
+            </div>
         </div>
 
 
@@ -511,18 +605,22 @@
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
                 document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Dali, a beautiful ancient town";
                 var Image1M = document.getElementById("img1");
-                Image1M.style.backgroundImage="url(images/accom1.jpg)"
-                
+                Image1M.style.backgroundImage = "url(itineraries_img/kunming/kunming1.jpg)"
+
 
                 document.getElementById("Day2").innerText = "Day 2 : Dali";
                 document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a boat trip to Erhai Lake and visit the Bai people's fishing village";
                 document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Three Pagodas and the Chongsheng Temple";
                 document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Take a stroll along Foreigner Street and enjoy the local nightlife";
+                var Image1M = document.getElementById("img2");
+                Image1M.style.backgroundImage = "url(itineraries_img/dali/dali3.jpg)"
 
                 document.getElementById("Day3").innerText = "Day 3 : Lijiang";
                 document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a high-speed train from Dali to Lijiang and check into hotel";
                 document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Lijiang Old Town and explore the ancient architecture";
                 document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Attend the Naxi Orchestra performance and enjoy dinner at a local restaurant";
+                var Image1M = document.getElementById("img3");
+                Image1M.style.backgroundImage = "url(itineraries_img/lijiang/lijiang1.jpg)"
             }
             if (line == "line2") {
                 document.getElementById("line-text").innerText = "Route 2 :  Kunming - Jianshui - Yuanyang";
@@ -530,16 +628,22 @@
                 document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming";
                 document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Jianshui, a small town with a rich history and culture.";
+                var Image1M = document.getElementById("img1");
+                Image1M.style.backgroundImage = "url(itineraries_img/kunming/kunming2.jpg)"
 
                 document.getElementById("Day2").innerText = "Day 2 : Jianshui";
                 document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Visit the Chaoyang Gate, a well-preserved ancient city gate, and the Confucius Temple";
                 document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Visit the Double Dragon Bridge, the largest and best-preserved ancient bridge in China, and the Zhu Family Garden";
                 document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Enjoy local cuisine in a night market in Jianshui.";
+                var Image1M = document.getElementById("img2");
+                Image1M.style.backgroundImage = "url(itineraries_img/jianshui/jianshui.webp)"
 
-                document.getElementById("Day3").innerText = "Day 3 : Lijiang";
+                document.getElementById("Day3").innerText = "Day 3 : Yuanyang";
                 document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a bus from Jianshui to Yuanyang and arrive in Yuanyang in the morning. Visit the Yuanyang Rice Terraces, a UNESCO World Heritage Site, and enjoy the spectacular scenery of the terraces.";
                 document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the local ethnic markets in Yuanyang and learn about the culture and traditions of the Hani and Yi minorities";
                 document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Stay in a local guesthouse and enjoy a hot spring bath";
+                var Image1M = document.getElementById("img3");
+                Image1M.style.backgroundImage = "url(itineraries_img/yuanyang/yuanyang1.jpg)"
             }
             if (line == "line3") {
                 document.getElementById("line-text").innerText = "Route 3 : Kunming - Shangri-La";
@@ -547,16 +651,22 @@
                 document.getElementById("Morning1").innerHTML = "  &emsp;&emsp;Arrive at Kunming Changshui International Airport and take a shuttle bus or taxi to the city center. Visit the Green Lake Park to enjoy the scenery and fresh air.";
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Yuantong Temple, the oldest and largest Buddhist temple in Kunming, and taste local snacks at Jinma Biji Archway Square.";
                 document.getElementById("Evening1").innerHTML = " &emsp;&emsp;Take an overnight train from Kunming to Shangri-La, a mythical and picturesque town in the northwest of Yunnan.";
+                var Image1M = document.getElementById("img1");
+                Image1M.style.backgroundImage = "url(itineraries_img/kunming/kunming3.jpeg)"
 
                 document.getElementById("Day2").innerText = "Day 2 : Shangri-La";
                 document.getElementById("Morning2").innerHTML = "Arrive in Shangri-La in the morning and check into a hotel. Visit the Songzanlin Monastery, the largest Tibetan Buddhist monastery in Yunnan.";
                 document.getElementById("Afternoon2").innerHTML = "Visit the Dukezong Ancient Town, a well-preserved Tibetan town with distinctive architecture and cultural relics. Walk around the old alleys, visit the local market, and taste local snacks.";
                 document.getElementById("Evening2").innerHTML = "Enjoy a bonfire party and traditional Tibetan dance and music performance in a local Tibetan family.";
+                var Image1M = document.getElementById("img2");
+                Image1M.style.backgroundImage = "url(itineraries_img/Shangri-La/Shangri-La2.jpg)"
 
                 document.getElementById("Day3").innerText = "Day 3 : Napa Lake and Potatso National Park";
                 document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Take a bus to the Napa Lake and enjoy the breathtaking scenery of the highland wetlands and birds.";
                 document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Potatso National Park, the first national park in mainland China and a paradise for nature lovers. Take a boat ride on the Shudu Lake and hike in the virgin forests to enjoy the stunning views of mountains, waterfalls, and wildlife.";
                 document.getElementById("Evening3").innerHTML = "&emsp;&emsp;Return to Shangri-La and enjoy a farewell dinner with local delicacies.";
+                var Image1M = document.getElementById("img3");
+                Image1M.style.backgroundImage = "url(itineraries_img/Shangri-La/Shangri-La3.jpg)"
             }
             if (line == "line4") {
                 document.getElementById("line-text").innerText = "Route 4 : Lijiang - Tiger Leaping Gorge";
@@ -564,16 +674,22 @@
                 document.getElementById("Morning1").innerHTML = " &emsp;&emsp;Arrive in Lijiang and check into a hotel. Visit the Lijiang Old Town, a UNESCO World Heritage Site, and learn about the Naxi culture and architecture.";
                 document.getElementById("Afternoon1").innerHTML = "&emsp;&emsp;Visit the Black Dragon Pool Park, a famous scenic spot in Lijiang with beautiful gardens, temples, and the iconic Jade Dragon Snow Mountain in the background.";
                 document.getElementById("Evening1").innerHTML = "&emsp;&emsp;Enjoy the nightlife in Lijiang with local music, food, and drinks.";
+                var Image1M = document.getElementById("img1");
+                Image1M.style.backgroundImage = "url(itineraries_img/lijiang/lijiang2.jpg)"
 
                 document.getElementById("Day2").innerText = "Day 2 : Tiger Leaping Gorge";
                 document.getElementById("Morning2").innerHTML = "&emsp;&emsp;Take a bus to the Tiger Leaping Gorge, one of the deepest and most spectacular gorges in the world. Start the trekking from Qiaotou Town to Halfway Guesthouse.";
                 document.getElementById("Afternoon2").innerHTML = "&emsp;&emsp;Continue trekking to the Walnut Garden or the 28 Bends and enjoy the amazing scenery of the gorge.";
                 document.getElementById("Evening2").innerHTML = " &emsp;&emsp;Stay at a guesthouse and enjoy a traditional hot pot dinner with the locals.";
+                var Image1M = document.getElementById("img2");
+                Image1M.style.backgroundImage = "url(itineraries_img/tiger/tiger1.jpg)"
 
                 document.getElementById("Day3").innerText = "Day 3 : Back to Lijiang";
-                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;;Continue trekking to Tina's Guesthouse and take a car back to Lijiang.";
+                document.getElementById("Morning3").innerHTML = "&emsp;&emsp;Continue trekking to Tina's Guesthouse and take a car back to Lijiang.";
                 document.getElementById("Afternoon3").innerHTML = "&emsp;&emsp;Visit the Baisha Village, another ancient town in Lijiang with unique architecture and murals. Take a workshop to learn the traditional embroidery or painting techniques from the locals.";
-                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;;Have a farewell dinner with Yunnan cuisine and watch the Naxi music and dance performance.";
+                document.getElementById("Evening3").innerHTML = " &emsp;&emsp;Have a farewell dinner with Yunnan cuisine and watch the Naxi music and dance performance.";
+                var Image1M = document.getElementById("img3");
+                Image1M.style.backgroundImage = "url(itineraries_img/lijiang/lijiang3.jpg)"
             }
         }
 
