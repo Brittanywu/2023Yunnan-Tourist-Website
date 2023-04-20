@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .minorPic_right {
+            width: 300px;
+            height: 400px;
+            background-repeat: no-repeat;
+            margin-top: 30px;
+            margin-left: 30px;
+
+            /* Grow-Shadow */
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+            transition-property: box-shadow, transform;
+
+        }
+
+
+
+        body {
+            background-image: url("111/desbackground.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /*top and bottom*/
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgb(1, 1, 1);
+            height: 90px;
+        }
+
+        .navilink {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navilink li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .navilink li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navilink li a:hover {
+            text-decoration: underline;
+        }
+
+        /* add picture rotation */
+        .imgBox {
+
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .imgBox img {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .img1 {
+            display: block;
+        }
+
+        .img2,
+        .img3 {
+            display: none;
+        }
+
+
+        .main {
+            margin: 0;
+            border: none;
+        }
+
+        .pagetitle {
+            color: white;
+            font-size: 20pt;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .introduction {
+            margin-top: -30px;
+            background-color: rgb(9, 9, 8);
+            color: white;
+            font-size: 19pt;
+            text-align: left;
+            height: 200px;
+            border: none;
+        }
+
+        .showblocks {
+            background-color: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .destitle {
+            font-size: 30pt;
+            color: white;
+            text-align: center;
+        }
+
+        .despic {
+            margin-top: 50px;
+            width: 100%;
+
+            height: auto;
+
+            max-width: 900px;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .desintro-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .desinrto {
+            color: white;
+            max-width: 900px;
+            font-size: 13pt;
+            text-align: left;
+            /* 修改 text-align 为 left */
+            padding: 0 1rem;
+        }
+
+        .bottombar {
+            display: flex;
+            background-color: rgb(9, 9, 8);
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .bottominfo {
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottombar h5:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+        }
+
+
+        .content-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <div class="navigation">
+        <div class="logo">
+            <img src="images/logo.jpg" width="200px" height="auto">
+        </div>
+        <ul class="navilink">
+            <li><a href="">Destinations</a></li>
+            <li><a href="">Culture</a></li>
+            <li><a href="">Itineraries</a></li>
+            <li><a href="">Food & Drink</a></li>
+            <li><a href="">Accommodations</a></li>
+        </ul>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+
+        <div class="imgBox">
+            <img class="img-slide img1" src="111/intro6.jpg" alt="1">
+            <img class="img-slide img2" src="111/intro3.jpg" alt="2">
+            <img class="img-slide img3" src="111/intro4.jpg" alt="3">
+
+
+
+        </div>
+        <div class="introduction">
+            <h2><br>&nbsp;&nbsp;<i> 10 Must-Visit Destinations
+                    that you can not miss!</i>
+            </h2>
+        </div>
+
+
+        <div class="showblocks">
+            <div class="descontent">
+                <h2 class="destitle">1.Shilin</h2>
+                <img src="111/shilin.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">The world-famous karst geological wonder - Stone Forest Scenic Area is located
+                        in Shilin Yi Autonomous County, Kunming City, Yunnan Province, 78 kilometers away from Kunming
+                        City. The uncanny workmanship of nature has created a beautiful and magical stone forest, which
+                        is known as "God's Bonsai" and "Sculpture Museum of Nature". Formed 300 million years ago, the
+                        stone forest karst geological wonder has a vast distribution area, magnificent momentum, various
+                        types, and rich landscapes. The protected area covers an area of 350 square kilometers.
+                        Dissolution caves, exquisite and beautiful plateau lakes, cliffs and waterfalls with a drop of
+                        more than 90 meters... the strange rock shapes are lifelike, breathtaking and unforgettable. The
+                        Sani people of the Yi nationality who have lived in the Shilin area for generations are born
+                        singers and dancers. They create the art and poetry of life every moment and create the
+                        world-famous "Ashima" national culture. Its systematic language and characters, rich poetry and
+                        legends, gorgeous national costumes, fiery folk songs and dances, simple and rough wrestling
+                        competitions, passionate three-stringed dances, and unique weddings and funerals all reflect the
+                        ancient National cultural charm and regional characteristics.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">2.Cangshan·Erhai</h2>
+                <img src="111/cangshanerhai.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">Cangshan Erhai National Nature Reserve is located in Dali Bai Autonomous
+                        Prefecture, Yunnan Province. It consists of Cangshan Mountain and Erhai Lake. It spans Dali,
+                        Erhai Lake, Yangbi and other cities and counties, with a total area of 79,700 hectares. Dali
+                        Cangshan Erhai Lake Reserve belongs to the category of natural ecosystems, and also belongs to
+                        the category of natural relics, including three types: forest ecosystem type, inland wetland and
+                        water ecosystem type, and geological relic type. It is a multi-level, multi-functional,
+                        Large-capacity comprehensive nature reserve. Its purpose is to protect the remains of ancient
+                        glaciers, the natural landscape of plateau lakes, unique fish such as bowfish, historical sites
+                        and cold mountain forests in Cangshan Mountain. There are nineteen majestic peaks in Cangshan
+                        Mountain, and the top of the mountain is covered with snow all the year round. There is a stream
+                        between every two peaks, flowing from top to bottom and flowing eastward until it flows into
+                        Erhai Lake. Erhai is known as the "pearl of the plateau". It is long and narrow, looking down
+                        from the sky, Erhai Lake looks like a crescent moon, lying quietly between Cangshan Mountain and
+                        Dali Bazi. There are also many beautiful bays in Erhai Lake, the larger ones are Haidong Bay,
+                        Duase Bay, Kanglang Bay and Shuanglang Bay. Especially the "three islands in the sea" are the
+                        most beautiful.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">3.Pudacuo National Park</h2>
+                <img src="111/pudacuo.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">Pudacuo National Park is located in Shangri-La City, Diqing Prefecture, Yunnan
+                        Province, China. The park was announced on June 25, 2007. It is the first national park in
+                        mainland China. Pudacuo National Park is located in the center of the "Three Parallel Rivers"
+                        World Natural Heritage in Northwest Yunnan. The first national park in mainland China. In 2007,
+                        Pudacuo was opened to the outside world, about 19 kilometers away from Shangri-La County. .
+                        Pudacuo is a transliteration of Sanskrit, meaning boat and lake. "Mandala" or "Putuo" refers to
+                        a sacred Avalokiteshvara (Avalokitesvara). "Putuo" or "Puda" refers to Purdue sentient beings to
+                        reach the other side of the sea of suffering. The name of Pudacuo comes from the Tibetan word
+                        Bitahai. Pudacuo is a mysterious and pollution-free fairy tale world. Pudacuo National Park is
+                        mainly composed of Shudu Lake, Bitahai and Militang subalpine pasture. From 3500 meters to more
+                        than 4000 meters, as an important part of the Three Parallel Rivers World Natural Heritage, the
+                        park is also a nature reserve with a good ecological environment, including swamps, lakes,
+                        virgin forests, streams, springs and rare animals.</h3>
+                </div>
+                <br>
+            </div>
+
+
+            <div class="descontent">
+                <h2 class="destitle">4.Meili Snow Mountain</h2>
+                <img src="111/meili.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">Meili Snow Mountain is a huge north-south snow mountain group in the west of
+                        Deqin County, Diqing Tibetan Autonomous Prefecture, with a total length of 150 kilometers and a
+                        park with a total area of 960 square kilometers. The "Three Parallel Rivers" area of Jinsha
+                        River, Lancang River and Nujiang River is the heartland of the Shangri-La tourist area and the
+                        World Natural Heritage of Three Parallel Rivers. Together with Gang Rinpoche in Tibet, Animaqing
+                        Mountain in Qinghai, and Gaduojuewo in Qinghai, they are also known as the four sacred mountains
+                        of Tibetan Buddhism. Meili Snow Mountain is called "Kawagebo Snow Mountain" in Tibetan areas.
+                        The local Tibetan people named it and endowed it with divinity. It has left traces of survival
+                        at the foot of Meili Snow Mountain for generations, and also endowed Meili with profound
+                        cultural connotations snow mountain.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">5.Lugu Lake</h2>
+                <img src="111/luguhu.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">Lugu Lake is located at the junction of Yunnan and Sichuan in the north of
+                        Yunnan Province. It is a national scenic spot, a nature reserve and a national 4A tourist
+                        attraction. Lugu Lake is one of the few virgin lakes in the world that still retains a clean and
+                        simple style. It is one of the nine plateau lakes in Yunnan, and its water body belongs to Class
+                        I water quality. The total area of Luguhu Scenic Area is 165.6 square kilometers, the total area
+                        of the lake area is 50.3 square kilometers, the lake surface is 2690 meters above sea level, the
+                        maximum water depth is 93 meters, and the average water depth is 45 meters. The Mosuo people who
+                        have lived on the banks of Lugu Lake for generations still live in a matriarchal family. The
+                        "walking marriage system in which men do not marry women" is known as the living fossil of human
+                        family history and marriage history, and has extremely high sociological value. and tourism
+                        value. The perfect combination of nature and humanities, Lugu Lake has become one of the most
+                        distinctive and potential tourist destinations in Yunnan. The scenic spot has successively won
+                        titles such as "China's Top Ten Best Ecological and Cultural Tourism Scenic Spots", "China's Top
+                        Ten Most Beautiful Lakes" and "China's Top Ten Ecologically Famous Lakes".</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">6.Yuanyang Terraced Fields</h2>
+                <img src="111/yuanyang.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">Yuanyang Terraced Fields, located in the south of Ailao Mountain in Yuanyang
+                        County, Honghe Prefecture, Yunnan Province, is a masterpiece left by the Hani people for
+                        generations. Yuanyang Terraced Fields is the core area of Honghe Hani Terraced Fields. [1] The
+                        Honghe Hani Terraced Fields is a wonder of terraced farming civilization jointly created by the
+                        people of various ethnic groups, mainly the Hani nationality, by taking advantage of the special
+                        geographical climate. The terraces cultivated by the Hani people in Yuanyang vary with the
+                        terrain of the mountains. Large fields are reclaimed on gentle slopes; As big as a dustpan,
+                        there are often tens of thousands of acres on one slope. The Honghe Hani Terraced Fields are
+                        located in the south of Yunnan Province and spread across the four counties of Yuanyang, Honghe,
+                        Jinping, and Lvchun in Honghe Prefecture, with a total area of about 1 million mu. Yuanyang
+                        County alone has 170,000 mu of terraced fields. The Yuanyang Rice Terraces are landscape and
+                        pastoral paintings that have been "sculpted" by the Hani people for more than 1,300 years.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">7.Dali and Lijiang Ancient cities</h2>
+                <img src="111/gucheng.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">There are many ancient cities in Yunnan, the most famous of which are the
+                        ancient cities of Dali and Lijiang. Dali has a long history and is one of the earliest cultural
+                        birthplaces in Yunnan. According to literature, the ancestors of the Bai people flourished here
+                        in the 4th century, scattering many clan tribes. The ancient city of Dali is the former site of
+                        the ancient Nanzhao Kingdom, which presents the splendid history and culture of the ancient
+                        capital of Dali for thousands of years. With the prosperity of old history and culture and the
+                        innovation of culture with the new era, this place is both new school and has a thick sense of
+                        history. Lijiang Old Town is 2416 meters above sea level and is surrounded by mountains on all
+                        sides. It was built in the late Song and early Yuan dynasties, and flourished in the Ming and
+                        Qing dynasties, with a history of more than 800 years. The city is built on the mountain, the
+                        street is made by the water, the tiled houses are lined up, the market is thick, the families
+                        are flowing, the households are weeping poplar, a street and a scene can be painted. It is the
+                        centralized exhibition area of diversified culture and residential architecture of various
+                        ethnic groups, and is a famous cultural city that continues a strong historical lineage.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">8.Puzhehei</h2>
+                <img src="111/puzhehei.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">"Puzhehei" is a Yi language, which means "a lake full of fish and shrimp", and
+                        is known as "a rare and unique karst landscape in China". It is well-known because it was filmed
+                        here in Hunan Satellite TV's parent-child program "Where Are We Going, Dad" in 2013. It is a
+                        national-level scenic spot, a national AAAAA-level tourist area, and a national wetland park.
+                        The total area is 388 square kilometers, and the core scenic spot is 15 square kilometers. It
+                        belongs to the karst area in southeastern Yunnan and is a typical karst karst landform. Known
+                        for the landscape. There are not only the beauty of Guilin's lonely peaks, clear streams,
+                        secluded caves, and strange rocks, but also the quaint charm of small bridges and flowing water
+                        houses in the south of the Yangtze River, as well as the sparkling beauty of Hangzhou West Lake,
+                        and even more magnificent than the lotus lake. Acre lotus.
+                        The rivers and lakes are densely covered, and the winding waterways surround the vast green
+                        hills. The ten thousand mu lotus blooms in elegant pink in summer, filling the whole lake.
+                        Occasionally, boats across the water will cause ripples in the lake water, scratching the
+                        surface of the lake. The blue sky, white clouds and distant mountains in the water attract the
+                        fish and shrimps jumping happily in the water. There are 265 scenic spots in the scenic area,
+                        each with its own merits, 312 lonely peaks dotted with dots, 83 karst caves in various poses, 54
+                        lakes connected with each other, and 20,000 mu of water surface. Clear and transparent, the
+                        13-kilometer grand canyon is majestic and majestic, the 3-kilometer tea-horse ancient road is
+                        mysterious and simple, and the 40,000-mu plateau karst wetland is breathtaking.
+                        This is Puzhehei. The simple Yi villagers, interesting folk festivals, ancient villages, cave
+                        landscapes, and pastoral scenery make this place another paradise on the land of Yunnan.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">9.Dongchuan Red Land</h2>
+                <img src="111/hongtu.jpg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">"Dongchuan Red Land" is located in the north-east of Kunming city, and belongs
+                        to Dongchuan district of Kunming. The journey from Kunming to the center of the site is about
+                        250 kilometers by car, and the main attractions are between 1800 and 2600 above sea level. Due
+                        to the red soil developed under the high temperature and rain in Dongchuan, Yunnan, this soil
+                        contains more iron and aluminum components, less organic matter, strong acidity, and heavy clay
+                        soil. The area of nearly 100 miles in circumference here is the most concentrated, typical and
+                        characteristic red soil on the red soil plateau of Yunnan. Lined with blue sky, white clouds and
+                        that unpredictable light, it constitutes a spectacular view of the red land. In the scenic spot
+                        grows a sand pine tree, a genus of fir in the pine family, which is said to be thousands of
+                        years old and has withered for three years before spitting new shoots. It is said to be a
+                        once-in-a-decade auspicious phenomenon.</h3>
+                </div>
+                <br>
+            </div>
+
+            <div class="descontent">
+                <h2 class="destitle">10. Starlight night market </h2>
+                <img src="111/xingguangyeshi.jpeg" class="despic" />
+                <br>
+                <div class="desintro-wrapper">
+                    <h3 class="desinrto">On the border of China's beautiful Xishuangbanna, there is an exotic starlight
+                        night market on the banks of the Lancang River, which combines the customs of the Dai people in
+                        Xishuangbanna and the exotic customs of neighboring countries. This is the most distinctive
+                        large-scale night market in the Golden Triangle area. Starlight Night Market is located inside
+                        Gaozhuang Xishuang Scenic Area, Jinghong City, Xishuangbanna. Blooming green light. When night
+                        falls, the whole night market is as brilliant as a river of stars, and the stars are twinkling.
+                        As the name suggests, it is called the Starlight Night Market. The Starlight Night Market opens
+                        at 7 o'clock every night, bypassing the Shwedagon Pagoda and walking down the stairs for 50
+                        meters to the Starlight Night Market. There are hundreds of stalls with different
+                        characteristics, not only the delicacy of the Dai people in Xishuangbanna, but also the
+                        delicacies of neighboring countries such as Laos and Thailand, and hundreds of different kinds
+                        of snacks. In addition to the delicious food, the traditional song and dance performances of
+                        different styles brought by different ethnic groups such as Dai, Blang, and Thai are performed
+                        regularly here every night. The diners who come here can enjoy the food while admiring the
+                        sights that are rarely seen on weekdays. national performance.</h3>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!-- bottombar -->
+        <div class="bottombar">
+            <div class="bottominfo">
+                <h3>Find us on</h3>
+                <h5>Twitter</h5>
+                <h5>Instagram</h5>
+                <h5>Facebook</h5>
+                <h5>Youtube</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Contact us</h3>
+                <h5>Request a map</h5>
+                <h5>Site feedback</h5>
+                <h5>Need help?</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Help</h3>
+                <h5>Terms of use</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Cookies</h5>
+                <h5>Manage privacy settings</h5>
+            </div>
+            <div class="bottominfo">
+                <h3>Our other sites</h3>
+                <h5>Media</h5>
+                <h5>The Visual Library</h5>
+                <h5>Travel Trade</h5>
+                <h5>Business Events</h5>
+            </div>
+            <div class="bottominfo">
+                <img src="images/logo.jpg" alt="Logo" width="200px" height="auto">
+            </div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    var index = 0;
+
+    function ChangeImg() {
+        index++;
+        var a = document.getElementsByClassName("img-slide");
+        if (index >= a.length) index = 0;
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.display = 'none';
+        }
+        a[index].style.display = 'block';
+    }
+
+    setInterval(ChangeImg, 2000);
+</script>
+
+</html>
