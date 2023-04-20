@@ -207,7 +207,6 @@
         .block-link:hover {
              text-decoration: underline;
         }
-        //适应手机屏幕
      @media (max-width: 767px) {
     .navigation {
         flex-direction: column;
@@ -242,7 +241,6 @@
         padding-left: 20px;
     }
     }
-        //适应iPad屏幕
     @media (min-width: 768px) and (max-width: 1024px) {
     .navigation {
         flex-direction: column;
@@ -287,11 +285,11 @@
         </div>
         <ul class="navilink">
             <li><a href="travel_index.html">Home</a></li>
-            <li><a href="">Destinations</a></li>
-            <li><a href="">Culture</a></li>
-            <li><a href="">Itineraries</a></li>
-            <li><a href="foodanddrink_version3.0.html">Food & Drink</a></li>
-            <li><a href="">Accommodations</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="travel_itineraries.html">Itineraries</a></li>
+            <li><a href="foodanddrink.html">Food & Drink</a></li>
+            <li><a href="accomodation.html">Accommodations</a></li>
         </ul>
     </div>
 
@@ -319,23 +317,23 @@
             <br><br>
             <div class="block foodpic">
                 <img src="images/food.jpg" alt="Food and drink">
-                <h3><a href="foodanddrink_version3.0.html" class="block-link">Food and drink -></a></h3>
+                <h3><a href="foodanddrink.html" class="block-link">Food and drink -></a></h3>
             </div>
             <div class="block hotelpic">
                 <img src="images/DSC_9347.jpg" alt="Cozy accommodations">
-                <h3><a href="your-link-url" class="block-link">Cozy Accommodations -></a></h3>
+                <h3><a href="accomodation.html" class="block-link">Cozy Accommodations -></a></h3>
             </div>
             <div class="block culturepic">
                 <img src="images/aaa-8.jpg" alt="Minority cultures">
-                <h3><a href="your-link-url" class="block-link">Minority Cultures -></a></h3>
+                <h3><a href="culture.html" class="block-link">Minority Cultures -></a></h3>
             </div>
             <div class="block placepic">
                 <img src="images/DSC_9631.jpg" alt="Ideal destinations">
-                <h3><a href="your-link-url" class="block-link">Ideal Destinations -></a></h3>
+                <h3><a href="destination.html" class="block-link">Ideal Destinations -></a></h3>
             </div>
             <div class="block routepic">
                 <img src="images/route.jpg" alt="Suitable itineraries">
-                <h3><a href="your-link-url" class="block-link">Suitable Itineraries -></a></h3>
+                <h3><a href="travel_itineraries.html" class="block-link">Suitable Itineraries -></a></h3>
             </div>
         </div>
         <br><br><br>
@@ -398,7 +396,6 @@
         }
         a[index].style.display='block';
     }
-    //视频播放
     function playPause() {
      var myVideo = document.getElementById("myVideo");
      if (myVideo.paused) {
