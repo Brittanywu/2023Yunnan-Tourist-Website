@@ -110,9 +110,9 @@
             margin-top: -30px;
             background-color: rgb(9, 9, 8);
             color: white;
-            font-size: 19pt;
+            font-size: 15pt;
             text-align: left;
-            height: 200px;
+            height: 170px;
             border: none;
         }
 
@@ -133,18 +133,33 @@
         .despic {
             margin-top: 50px;
             width: 100%;
-
             height: auto;
-
             max-width: 900px;
-
             background-repeat: no-repeat;
             background-size: cover;
-
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+            transition-property: box-shadow, transform;
             margin: 0 auto;
             display: flex;
             justify-content: center;
         }
+
+        /* Grow-Shadow */
+        .despic:hover,
+        .despic:focus,
+        .despic:active {
+            box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
 
         .desintro-wrapper {
             display: flex;
@@ -197,55 +212,63 @@
 
             margin-bottom: 30px;
         }
-     @media (max-width: 767px) {
-    .navigation {
-        flex-direction: column;
-        text-align: center;
-    }
-    .navilink {
-        display: none;
-    }
-    .introduction{
-        text-align: center;
-    }
-    .bottombar {
-        flex-direction: column;
-        align-items: center;
-    }
-    .bottominfo {
-        margin-bottom: 20px;
-        text-align: center;
-        padding-left: 20px;
-    }
-    }
-    @media (min-width: 768px) and (max-width: 1024px) {
-    .navigation {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .navilink {
-        padding-top: 10px;
-    }
-    
-    .navilink li {
-        margin-left: relative;
-        margin-bottom: 10px;
-    }
-    .mustdo{
-        text-align: center;
-    }
-    .bottombar {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .bottominfo {
-        margin-bottom: 20px;
-        text-align: center;
-        padding-left: 20px;
-    }
-    }
+        @media (max-width: 767px) {
+            .navigation {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navilink {
+                display: none;
+            }
+
+            .introduction {
+                text-align: center;
+            }
+
+            .bottombar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bottominfo {
+                margin-bottom: 20px;
+                text-align: center;
+                padding-left: 20px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .navigation {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navilink {
+                padding-top: 10px;
+            }
+
+            .navilink li {
+                margin-left: relative;
+                margin-bottom: 10px;
+            }
+
+            .mustdo {
+                text-align: center;
+            }
+
+            .bottombar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bottominfo {
+                margin-bottom: 20px;
+                text-align: center;
+                padding-left: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -260,7 +283,7 @@
             <li><a href="travel_index.html">Home</a></li>
             <li><a href="destination.html">Destinations</a></li>
             <li><a href="culture.html">Culture</a></li>
-            <li><a href="travel_itineraies.html">Itineraries</a></li>
+            <li><a href="travel_itineraries.html">Itineraries</a></li>
             <li><a href="foodanddrin.html">Food & Drink</a></li>
             <li><a href="accommodation.html">Accommodations</a></li>
         </ul>
@@ -278,7 +301,7 @@
 
         </div>
         <div class="introduction">
-            <h2><br>&nbsp;&nbsp;<i> 10 Must-Visit Destinations
+            <h2><br><br>&nbsp;&nbsp;<i> 10 Must-Visit Destinations
                     that you can not miss!</i>
             </h2>
         </div>
