@@ -344,7 +344,7 @@
 <body>
     <div class="navigation">
         <div class="logo">
-            <img src="images/yunnan.jpg" alt="Logo" width="200px" height="auto">
+            <img src="images/yunnan.jpg" width="200px" height="auto">
         </div>
 
         <ul class="navilink">
@@ -456,7 +456,7 @@
                 });
                 kunmingJianshuiYuanyangPolyline.setMap(map);
                 var kunmingJianshuiYuanyangInfoWindow = new google.maps.InfoWindow({
-                    content: '<h3>Route 2 : Kunming - Jianshui - Yuanyang</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming - Jianshui - Yuanyang.</p>'
+                    content: '<h3>Route 2 : Kunming - Jianshui - Yuanyang</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
                 });
 
                 kunmingJianshuiYuanyangPolyline.addListener('click', function (event) {
@@ -478,7 +478,7 @@
                 });
                 kunmingShangriLaPolyline.setMap(map);
                 var kunmingShangriLaInfoWindow = new google.maps.InfoWindow({
-                    content: '<h3>Route 3 :  Kunming - Shangri-La</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming - Shangri-La.</p>'
+                    content: '<h3>Route 3 :  Kunming - Shangri-La</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
                 });
 
                 kunmingShangriLaPolyline.addListener('click', function (event) {
@@ -500,7 +500,7 @@
                 });
                 LijiangTigerPolyline.setMap(map);
                 var kunmingShangriLaInfoWindow = new google.maps.InfoWindow({
-                    content: '<h3>Route 4 : Lijiang - Tiger Leaping Gorge</h3><p>This is a popular travel route in Yunnan Province, connecting Lijiang - Tiger Leaping Gorge.</p>'
+                    content: '<h3>Route 4 : Lijiang - Tiger Leaping Gorge</h3><p>This is a popular travel route in Yunnan Province, connecting Kunming, Dali, and Lijiang.</p>'
                 });
 
                 LijiangTigerPolyline.addListener('click', function (event) {
@@ -514,11 +514,12 @@
 
 
         <div class="introduction">
-            <h2 class="size">
+            <h1 class="size">
+                <br>
                 Whether you're visiting Yunnan for a few days or a few weeks,
                 you'll find ideas here to help you plan your trip.
                 <br>
-            </h2>
+            </h1>
         </div>
 
     </div>
@@ -540,14 +541,14 @@
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
                 <h1 id="Day1" class="size">Dali</h1>
-                <h3 class="margin-oneside-left size">Three Pagodas:</h3>
+                <h3 id="morning01" class="margin-oneside-left size">Three Pagodas:</h3>
                 <p id="Morning1" class="margin-both-side size">
                     &emsp;&emsp;A complex of three ancient Buddhist pagodas standing by the Cangshan Mountains.</p>
-                <h3 class="margin-oneside-left sizeh3">Erhai Lake:</h3>
+                <h3 id="afternoon01" class="margin-oneside-left sizeh3">Erhai Lake:</h3>
                 <p id="Afternoon1" class="margin-both-side size">
                     &emsp;&emsp; A large freshwater lake that offers scenic views and is a popular spot for boating and
                     fishing.</p>
-                <h3 class="margin-oneside-left size">Old Town of Dali:</h3>
+                <h3 id="evening01" class="margin-oneside-left size">Old Town of Dali:</h3>
                 <p id="Evening1" class="margin-both-side size">
                     &emsp;&emsp;A historic walled city with traditional Bai architecture, bustling markets, and vibrant
                     nightlife.</p>
@@ -559,13 +560,13 @@
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div id="leftIntro2" class="leftIntro">
                 <h1 id="Day2" class="size">Pu'er</h1>
-                <h3 class="margin-oneside-left size">Jingmai Mountain:</h3>
+                <h3 id="morning02" class="margin-oneside-left size">Jingmai Mountain:</h3>
                 <p id="Morning2" class="margin-both-side  size">
                     &emsp;&emsp;A scenic mountainous area that produces high-quality Pu'er tea.</p>
-                <h3 class="margin-oneside-left size">Banpo Tea Garden:</h3>
+                <h3 id="afternoon02" class="margin-oneside-left size">Banpo Tea Garden:</h3>
                 <p id="Afternoon2" class="margin-both-side size">
                     &emsp;&emsp;A picturesque tea garden located in the Lancang River valley.</p>
-                <h3 class="margin-oneside-left size">Simao Ancient City:</h3>
+                <h3 id="evening02" class="margin-oneside-left size">Simao Ancient City:</h3>
                 <p id="Evening2" class="margin-both-side size">
                     &emsp;&emsp;An ancient town with well-preserved Ming and Qing dynasty architecture and a tea market.
                 </p>
@@ -577,14 +578,14 @@
         <div class="everydayit hvr-grow-shadow hvr-grow-shadow:hover hvr-grow-shadow:focus hvr-grow-shadow:active">
             <div class="leftIntro">
                 <h1 id="Day3" class="size">Shangri-La</h1>
-                <h3 class="margin-oneside-left size">Pudacuo National Park:</h3>
+                <h3 id="morning03" class="margin-oneside-left size">Pudacuo National Park:</h3>
                 <p id="Morning3" class="margin-both-side  size">
                     &emsp;&emsp;A stunning nature reserve with pristine lakes, forests, and mountains.</p>
-                <h3 class="margin-oneside-left size">Songzanlin Monastery:</h3>
+                <h3 id="afternoon03" class="margin-oneside-left size">Songzanlin Monastery:</h3>
                 <p id="Afternoon3" class="margin-both-side size">
                     &emsp;&emsp; A Tibetan Buddhist monastery known as the "Little Potala Palace" for its grand
                     architecture and religious significance.</p>
-                <h3 class="margin-oneside-left">Dukezong Ancient Town:</h3>
+                <h3 id="evening03" class="margin-oneside-left">Dukezong Ancient Town:</h3>
                 <p id="Evening3" class="margin-both-side size">
                     &emsp;&emsp;A historic town with traditional Tibetan houses, narrow streets, and a famous tower
                     offering panoramic views of the city.</p>
@@ -598,6 +599,18 @@
     <script>
         function changeLine(line) {
             if (line == "line1") {
+                document.getElementById("morning01").innerText = "Morning";
+                document.getElementById("afternoon01").innerText = "Afternoon";
+                document.getElementById("evening01").innerText = "Evening";
+
+                document.getElementById("morning02").innerText = "Morning";
+                document.getElementById("afternoon02").innerText = "Afternoon";
+                document.getElementById("evening02").innerText = "Evening";
+
+                document.getElementById("morning03").innerText = "Morning";
+                document.getElementById("afternoon03").innerText = "Afternoon";
+                document.getElementById("evening03").innerText = "Evening";
+                
                 document.getElementById("line-text").innerText = "Route 1 : Kunming-Dali-Lijiang";
                 document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
                 document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
@@ -622,6 +635,18 @@
                 Image1M.style.backgroundImage = "url(itineraries_img/lijiang/lijiang1.jpg)"
             }
             if (line == "line2") {
+                document.getElementById("morning01").innerText = "Morning";
+                document.getElementById("afternoon01").innerText = "Afternoon";
+                document.getElementById("evening01").innerText = "Evening";
+
+                document.getElementById("morning02").innerText = "Morning";
+                document.getElementById("afternoon02").innerText = "Afternoon";
+                document.getElementById("evening02").innerText = "Evening";
+
+                document.getElementById("morning03").innerText = "Morning";
+                document.getElementById("afternoon03").innerText = "Afternoon";
+                document.getElementById("evening03").innerText = "Evening";
+
                 document.getElementById("line-text").innerText = "Route 2 :  Kunming - Jianshui - Yuanyang";
                 document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
                 document.getElementById("Morning1").innerHTML = "&emsp;&emsp;Visit Green Lake Park to enjoy the scenery and fresh air";
@@ -645,6 +670,18 @@
                 Image1M.style.backgroundImage = "url(itineraries_img/yuanyang/yuanyang1.jpg)"
             }
             if (line == "line3") {
+                document.getElementById("morning01").innerText = "Morning";
+                document.getElementById("afternoon01").innerText = "Afternoon";
+                document.getElementById("evening01").innerText = "Evening";
+
+                document.getElementById("morning02").innerText = "Morning";
+                document.getElementById("afternoon02").innerText = "Afternoon";
+                document.getElementById("evening02").innerText = "Evening";
+
+                document.getElementById("morning03").innerText = "Morning";
+                document.getElementById("afternoon03").innerText = "Afternoon";
+                document.getElementById("evening03").innerText = "Evening";
+
                 document.getElementById("line-text").innerText = "Route 3 : Kunming - Shangri-La";
                 document.getElementById("Day1").innerText = "Day 1 : Arrival in Kunming";
                 document.getElementById("Morning1").innerHTML = "  &emsp;&emsp;Arrive at Kunming Changshui International Airport and take a shuttle bus or taxi to the city center. Visit the Green Lake Park to enjoy the scenery and fresh air.";
@@ -668,6 +705,18 @@
                 Image1M.style.backgroundImage = "url(itineraries_img/Shangri-La/Shangri-La3.jpg)"
             }
             if (line == "line4") {
+                document.getElementById("morning01").innerText = "Morning";
+                document.getElementById("afternoon01").innerText = "Afternoon";
+                document.getElementById("evening01").innerText = "Evening";
+
+                document.getElementById("morning02").innerText = "Morning";
+                document.getElementById("afternoon02").innerText = "Afternoon";
+                document.getElementById("evening02").innerText = "Evening";
+
+                document.getElementById("morning03").innerText = "Morning";
+                document.getElementById("afternoon03").innerText = "Afternoon";
+                document.getElementById("evening03").innerText = "Evening";
+                
                 document.getElementById("line-text").innerText = "Route 4 : Lijiang - Tiger Leaping Gorge";
                 document.getElementById("Day1").innerText = "Day 1 : Arrival in Lijiang";
                 document.getElementById("Morning1").innerHTML = " &emsp;&emsp;Arrive in Lijiang and check into a hotel. Visit the Lijiang Old Town, a UNESCO World Heritage Site, and learn about the Naxi culture and architecture.";
