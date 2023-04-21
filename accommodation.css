@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    /* margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    border: none;
+    height: 90px;
+    background-color: rgb(1, 1, 1);
+    display: flex;
+    justify-content: space-between; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(9, 9, 8);
+    padding: 10px 20px;
+}
+
+.logo {
+    height:100px;
+    width: auto;
+}
+
+/* .navitext {
+    margin-left: 300px;
+    float: left;
+} */
+
+.navilink {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items:flex-end;
+}
+
+.navilink li {
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.navilink li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navilink li a:hover {
+    text-decoration: underline;
+}
+
+
+.main {
+    margin-left: -10px;
+    margin-right: -10px;
+    /* width:auto; */
+    /* border: none; */
+}
+
+.mainbackground {
+    height: 740px;
+    border: none;
+    background-color: rgb(0, 0, 0)
+    
+}
+
+.mainImg{
+    height: 550px;
+    background-image: url(images/微信图片_20230421120414.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width:auto; */
+}
+
+.pagetitle {
+    margin-top: -40px;
+    
+    color: white;
+    font-size: 20pt;
+    text-align: left;
+    height: 300px;
+}
+
+.introduction {
+    
+    color: white;
+    font-size: 12pt;
+    text-align: left;
+    height: 150px;
+}
+
+.front_intro{
+    width:500;
+    height:400;
+    /* border:2px solid black; */
+    margin-left: 10%;
+}
+
+.plan{
+    width: 700px;
+    font-size: 45pt;
+    font-weight: 1000;
+}
+
+
+
+.first_intro{
+    width: 500px;
+    font-size: 13pt;
+    font-weight: 300;
+}
+
+.showblocks{
+    background-color:rgb(252, 252, 252) ;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    border: 0.3px solid grey;
+    padding: 3px 30px;
+    /* margin: 0 auto; */
+    align-items:center;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: auto;
+    height: 360px;
+    
+}
+
+
+.hotel_intro {
+    margin-left: 50px;
+    margin-bottom: 40px;
+    width: 600px;
+    height: 210px; 
+    /* border:8px solid green; */
+    cursor: pointer;
+    
+    
+}
+
+/*图片放大*/
+.hotel_Img{
+    width:270px;
+    height:170px;
+    display: flex; 
+    justify-content: center; 
+    /* border: 2px solid green; */
+    max-height: 200px;
+    min-width: 0px;
+
+}
+
+
+.hotel_Img img{
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.hotel_Img img:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+
+.hotel_text {
+    width: 500px;
+    height: auto;
+    min-width:280px;
+    max-height:380px;
+    font-size: 11pt;
+    font-weight: 500;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.hotel_logo{
+    width:70px;
+    height:100px;
+    display: flex; 
+    justify-content: center; 
+    /* border: 2px solid green; */
+    min-width: 0px;
+    max-height: 110px;
+   
+}
+
+
+
+.stateit {
+    height: 300px;
+    width: 650px;
+    margin-left: 50px;
+    display: inline-block;
+}
+.blank{
+    height: 100px;
+    width: 600px;
+    border: none;
+}
+
+
+.button_accommodation{
+    background-color:black;
+    color:white;
+    width: 300px;
+    height: 47px;
+    border:0;
+    font-size: 16px;			
+    border-radius: 30px;
+}
+/*pagination*/
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a:hover {
+    transition: background-color .3s;/*鼠标悬停过渡效果*/
+    color: black;
+}
+
+ul.pagination li a:active,
+ul.pagination li a:focus {
+    background-color: #4CAF50;
+    color: white;
+    
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+div.center {
+    margin-top: 4%;
+    margin-bottom: 1%;
+    text-align:center;/*居中分页*/
+}
+
+.bottombar {
+    display: flex;
+    background-color: rgb(9, 9, 8);
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.bottominfo {
+    color: white;
+}
+
+/*自适应*/
+@media (max-width: 767px) {
+
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .navilink li a{
+        font-size: 9pt;
+    }
+
+    .introduction {
+    
+        color: white;
+        font-size: 12pt;
+        text-align: left;
+        height: 200px;
+        text-align: center;
+    }
+
+    .first_intro{
+        text-align: center;
+        width:350px;
+    }
+
+    .plan{    
+        font-size: 35pt;
+    }
+
+    
+    
+    
+
+    .row {
+        display: flex;
+        justify-content: center;
+        border: 0.3px solid grey;
+        padding: 3px 30px;
+        /* margin: 0 auto; */
+        align-items:center;
+        flex-direction: column;
+        width:auto;
+        /* max-height: 700px; */
+        overflow: hidden;
+        height: 70vh;
+    }
+
+    .hotel_Img{
+        width:270px;
+        height:170px;
+        display: flex; 
+        justify-content: center; 
+        /* border: 2px solid green; */
+        max-height: 200px;
+        min-width: 0px;
+    
+    }
+        .hotel_text {
+            width: 400px;
+            height: auto;
+            font-size: 11pt;
+            font-weight: 500;
+            margin: 0 auto;
+        }
+        
+        .hotel_logo{
+            width:70px;
+            height:100px;
+            display: flex; 
+            justify-content: center; 
+            /* border: 2px solid green; */
+            min-width: 0px;
+            max-height: 110px;
+           
+        }
+
+        .hotel_intro {
+            margin-left: 50px;
+            margin-bottom: 40px;
+            width: 600px;
+            height: 210px; 
+            /* border:8px solid green; */
+            cursor: pointer;
+            justify-content: center;
+            flex: 1;
+            text-align: center;
+            
+        }
+    
+
+        .bottombar {
+            flex-direction: column;
+            align-items: center;
+        }
+        .bottominfo {
+            margin-bottom: 20px;
+            text-align: center;
+            padding-left: 20px;
+        }
+    
+}
+
+
+
